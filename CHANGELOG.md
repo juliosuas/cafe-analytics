@@ -1,5 +1,12 @@
 # Changelog
 
+## Documentación y web — 2026-10-09
+
+- Diseño técnico y viabilidad comercial de Decisions con GPT-6 Luna, sin integración ejecutada.
+- Sección de oportunidades en la web, con estado propuesto y dos videos externos atribuidos.
+- Se mantiene el motor local y la demo principal de tres negocios.
+
+
 ## 0.1.1 — 2026-10-08
 
 - Demo reproducible de cafetería de barra: Ron Lach / Pexels 8430969, 36 s, 900 fotogramas, zonas de imagen y accesos no disponibles.

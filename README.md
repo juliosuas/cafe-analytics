@@ -138,6 +138,14 @@ python scripts/verify_run.py runs/mi-demo
 
 Las pruebas cubren tiempo, oclusiones, persistencia de ID, histéresis, dirección de cruce, geometría, inferencia ONNX real y la rama webcam con una fuente simulada. Las pruebas de inferencia requieren assets; sin ellos se omiten explícitamente. [Cómo reproducir y validar un piloto](docs/VALIDATION.md).
 
+## Decisions + GPT-6 Luna: diseño de la próxima integración
+
+Proponemos una capa visual opcional para clasificar estados de mesas y posibles entregas por estación, conservando tracking, tiempo y deduplicación localmente. **Diseño documentado; todavía no integrado ni probado contra la API.**
+
+- [Evaluación técnica](DECISIONS.md): arquitectura, contrato propuesto, costos bajo supuestos y protocolo de validación.
+- [Comercialización](COMMERCIALIZATION.md): oferta de piloto, límites de comunicación, fuentes y videos externos.
+- [Ver escenarios y videos](https://juliosuas.github.io/pulso-local/#decisions): presentación oficial y demo independiente, separadas del producto propio.
+
 ## Próxima etapa: de métricas a decisiones
 
 1. **Validar calidad:** cámara fija, accesos reales, conteo manual y errores medidos.

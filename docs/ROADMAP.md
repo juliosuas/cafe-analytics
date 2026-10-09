@@ -69,3 +69,15 @@ Reconocimiento facial, clasificación de edad/género/emoción, identidad entre 
 - [ ] Validación manual de preparación/entrega antes de presentar conteos o tiempos como métricas del negocio.
 
 Esta extensión sigue pendiente; un video del proceso no significa que el software reconozca esas acciones.
+
+
+## Extensión propuesta: Decisions + GPT-6 Luna
+
+- [x] [Factibilidad y arquitectura](../DECISIONS.md) con escenario de costos y criterios de evaluación.
+- [x] [Alcance comercial](../COMMERCIALIZATION.md) y videos de referencia atribuidos.
+- [ ] Dataset autorizado, anotación y turnos de evaluación separados.
+- [ ] Adaptador opcional, recortes, control de consumo y manejo de errores.
+- [ ] Estados de mesas y entregas por estación, deduplicados y trazables.
+- [ ] Inferencia real y comparación contra referencia manual; publicar aciertos y fallos.
+
+Estado: propuesta. No cambia las capacidades disponibles de v0.1.1.

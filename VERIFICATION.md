@@ -124,3 +124,13 @@ FFprobe: H.264 1280×720, 30 FPS, duración 27.000000 s, 810 fotogramas. Todos l
 Se ejecutó YOLOX-S y el tracker del proyecto sobre las tres escenas normalizadas, con inferencia a 10 FPS y salida a 30 FPS; en los dos cuadros intermedios se conserva la última caja. Cada escena contiene 270 fotogramas y tiene cajas confirmadas en 264 (los primeros seis corresponden a la confirmación inicial). Se verificaron coordenadas dentro del encuadre y prefijos de ID separados C/R/T. Las cajas y trazas provienen del detector; las tarjetas de negocio siguen siendo ficticias. La cámara móvil, oclusiones y time-lapse pueden producir errores y cambios de ID: no se presenta como una evaluación de precisión.
 
 El nuevo MP4 tiene 810 fotogramas, 27.000000 s, H.264 1280×960. La franja superior de 240 px contiene la información; la escena conserva sus 1280×720 completos debajo. Decodificación completa con FFmpeg sin errores y revisión visual de cuadros/etiquetas. Resumen reproducible en `docs/showcase/tracking-verification.json`, sin convertir estas observaciones en métricas de negocio.
+
+## Decisions: documentación y web — 9 de octubre de 2026
+
+Cambio editorial; el motor y sus dependencias no se modificaron. `DECISIONS.md` y `COMMERCIALIZATION.md` viven en la raíz del repositorio, fuera de la carpeta publicada por Pages.
+
+- Validador documental: 26 archivos, 119 destinos locales válidos; atribuciones presentes.
+- `git diff --check`: sin errores de formato.
+- Vista previa en navegador a 1280 px: sin desbordamiento horizontal; demo principal de 27 s cargada (`readyState=4`).
+- Reproducción real de ambos videos insertados: OpenAI `FB6oCmrIj-Y` y Mark Kashef `uTU5Ihgl_7Q`; verificados con imagen en movimiento y subtítulos. Autores, títulos y capítulos contrastados en YouTube. La disponibilidad futura depende del proveedor.
+- No se ejecutó inferencia con Decisions, ni se envió video a OpenAI, ni se midieron precisión/costos reales. No hay cliente de API en este cambio. No se repitió el pipeline de visión: no cambió su implementación.
