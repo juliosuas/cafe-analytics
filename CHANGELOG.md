@@ -1,5 +1,11 @@
 # Changelog
 
+## Curaduría de videos — 2026-10-09
+
+- Cuatro referencias de operación e inspección: huevos, cafetería, preparación de tacos y limones.
+- Fuentes atribuidas, tecnología indicada por caso, reproductores externos y enlaces de respaldo.
+- Demo de cafetería identificada como republicación y sin atribución a Decisions.
+
 ## Documentación y web — 2026-10-09
 
 - Diseño técnico y viabilidad comercial de Decisions con GPT-6 Luna, sin integración ejecutada.

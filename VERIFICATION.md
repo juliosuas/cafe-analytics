@@ -134,3 +134,11 @@ Cambio editorial; el motor y sus dependencias no se modificaron. `DECISIONS.md` 
 - Vista previa en navegador a 1280 px: sin desbordamiento horizontal; demo principal de 27 s cargada (`readyState=4`).
 - Reproducción real de ambos videos insertados: OpenAI `FB6oCmrIj-Y` y Mark Kashef `uTU5Ihgl_7Q`; verificados con imagen en movimiento y subtítulos. Autores, títulos y capítulos contrastados en YouTube. La disponibilidad futura depende del proveedor.
 - No se ejecutó inferencia con Decisions, ni se envió video a OpenAI, ni se midieron precisión/costos reales. No hay cliente de API en este cambio. No se repitió el pipeline de visión: no cambió su implementación.
+
+## Referencias de huevos, cafetería, tacos y limones — 9 de octubre de 2026
+
+- Documentación: 26 archivos y 120 destinos locales válidos; `git diff --check` aprobado.
+- Cuatro reproductores nuevos probados en navegador desde la página local: huevos 13.00 s, cafetería 26.38 s, tacos 23.15 s y limones 16.03 s. Los cuatro avanzaron, con `readyState=4` y sin error de medios; se inspeccionó su imagen.
+- Los tres widgets oficiales de X resolvieron los IDs de publicación esperados. La cafetería se reproduce desde la publicación pública indicada; el origen que esta enlaza apareció privado y no se utilizó como embed.
+- Sin desbordamiento horizontal en la vista comprobada de 1280 px; no se reporta prueba física de móvil. Enlaces originales disponibles como alternativa si X/YouTube bloquea la inserción.
+- Cambio de curaduría/documentación: no se modificó ni se volvió a ejecutar el motor de analítica. Los resultados de los videos externos no se incorporan al benchmark propio.

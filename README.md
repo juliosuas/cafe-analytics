@@ -144,6 +144,7 @@ Proponemos una capa visual opcional para clasificar estados de mesas y posibles 
 
 - [Evaluación técnica](DECISIONS.md): arquitectura, contrato propuesto, costos bajo supuestos y protocolo de validación.
 - [Comercialización](COMMERCIALIZATION.md): oferta de piloto, límites de comunicación, fuentes y videos externos.
+- [Casos de huevos, cafetería, tacos y limones](https://juliosuas.github.io/pulso-local/#casos-reales): referencias externas con tecnología y procedencia diferenciadas.
 - [Ver escenarios y videos](https://juliosuas.github.io/pulso-local/#decisions): presentación oficial y demo independiente, separadas del producto propio.
 
 ## Próxima etapa: de métricas a decisiones

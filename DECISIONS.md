@@ -103,4 +103,8 @@ Este commit documenta la propuesta; no agrega SDK, llamadas a OpenAI ni una nuev
 
 ## Comercialización y material público
 
-Ver [alcance comercial y criterios de publicación](COMMERCIALIZATION.md). La web presenta una integración propuesta, dos videos externos y escenarios a validar; los videos no son evidencia de una instalación de Pulso Local.
+Ver [alcance comercial y criterios de publicación](COMMERCIALIZATION.md). La web presenta una integración propuesta, videos externos y escenarios a validar; los videos no son evidencia de una instalación de Pulso Local.
+
+## Referencias visuales para diseñar el piloto
+
+La [curaduría y procedencia](COMMERCIALIZATION.md) recoge huevos, tacos, limones y cafetería. Solo el caso de huevos declara Decisions / GPT-6 Luna. Los otros sirven para comparar patrones de arquitectura o interfaz, no para demostrar la misma API. Para una barra, el patrón a ensayar es detector → seguimiento de objeto/episodio → selección de imágenes → clasificación → evento deduplicado. Mantener separado el benchmark propio de los videos de promoción de terceros.
