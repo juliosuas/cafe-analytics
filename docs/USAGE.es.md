@@ -39,7 +39,7 @@ open runs/mi-demo/report.html
 
 ## Ejecutar en Ubuntu
 
-Instrucciones para Ubuntu 22.04/24.04, Python 3.10–3.12. Ubuntu no estuvo disponible para una prueba real en esta entrega; no se presenta como plataforma verificada.
+Instrucciones para Ubuntu 22.04/24.04, Python 3.10–3.12. Ubuntu 24.04 con Python 3.12 fue verificado en GitHub Actions el 8 de octubre de 2026, incluyendo el clip completo; Ubuntu 22.04 y webcam física no se probaron en esta publicación.
 
 ```bash
 sudo apt update

@@ -9,7 +9,7 @@ Consultadas el 3 de octubre de 2026.
 - Página: https://www.pexels.com/video/customers-shopping-at-supermarket-10901926/
 - Descarga pública: https://videos.pexels.com/video-files/10901926/10901926-hd_1920_1080_30fps.mp4
 - Licencia: **Pexels License**, https://www.pexels.com/license/
-- Archivo incluido: `assets/retail.mp4`, sin modificar, 1920 × 1080, 30 FPS, 341 fotogramas (11.3667 s).
+- Archivo descargado por el script (no versionado en Git): `assets/retail.mp4`, sin modificar, 1920 × 1080, 30 FPS, 341 fotogramas (11.3667 s).
 - SHA256: `93e3f7aa893d781e61de49855d736662ab32b54d026f008a55b285b06cdbfd0b`.
 
 Pexels permite descargar, usar y modificar sus videos gratuitamente, incluido el uso comercial sujeto a sus condiciones. No es una licencia de código abierto ni dominio público. No vender copias sin modificar, no sugerir respaldo de las personas o marcas retratadas, no redistribuir como biblioteca de stock ni usar personas identificables de manera ofensiva. La atribución no es obligatoria según esa página, pero se conserva por trazabilidad. Este video se usa como material de demostración de software; no se afirma que las personas o Pexels respalden el producto.

@@ -1,0 +1,33 @@
+{
+  "date_local": "2026-10-08",
+  "timezone": "America/Mexico_City",
+  "run_url": "https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901",
+  "tested_commit": "d9398fc406404f26b3c294e535585dcb1ebb841a",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "os": "ubuntu-24.04",
+      "python": "3.12",
+      "tests_passed": 12,
+      "frames_processed": 341,
+      "frames_decoded": 341,
+      "confirmed_ids": 31,
+      "trajectory_samples": 5078,
+      "crossing_events": 1,
+      "processing_fps": 4.84
+    },
+    {
+      "os": "macos-14-arm64",
+      "python": "3.12",
+      "tests_passed": 12,
+      "frames_processed": 341,
+      "frames_decoded": 341,
+      "confirmed_ids": 30,
+      "trajectory_samples": 5002,
+      "crossing_events": 1,
+      "processing_fps": 2.9
+    }
+  ],
+  "physical_webcam_tested": false,
+  "accuracy_benchmark": false
+}

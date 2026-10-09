@@ -13,6 +13,7 @@ Primera publicación pública del MVP local construido y probado inicialmente el
 - Fuente y licencia de demo documentadas, descargas verificadas por SHA256.
 - Documentación orientada al dueño, arquitectura, contrato de datos, privacidad y validación.
 - Demo pública con video, GIF e imágenes de resultados reales.
+- GitHub Actions: 12 pruebas y pipeline completo de 341 frames aprobados en Ubuntu 24.04 y macOS 14 arm64.
 
 ### Límites conocidos
 

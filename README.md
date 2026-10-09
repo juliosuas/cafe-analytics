@@ -8,6 +8,7 @@ Analytics local de personas para cafeterías y tiendas. Convierte video en evide
 
 [**Ver demo con video →**](https://juliosuas.github.io/cafe-analytics/) · [Guía de instalación](docs/USAGE.es.md) · [Para dueños de negocio](docs/OWNER_GUIDE.md) · [Roadmap](docs/ROADMAP.md)
 
+[![Tests](https://github.com/juliosuas/cafe-analytics/actions/workflows/tests.yml/badge.svg)](https://github.com/juliosuas/cafe-analytics/actions/workflows/tests.yml)
 ![Python 3.10–3.13](https://img.shields.io/badge/Python-3.10–3.13-3776AB?logo=python&logoColor=white)
 ![License Apache 2.0](https://img.shields.io/badge/Código-Apache%202.0-168273)
 ![Stage MVP](https://img.shields.io/badge/Estado-MVP%20local-E5A345)
@@ -110,6 +111,8 @@ flowchart LR
 [Arquitectura y decisiones técnicas](docs/ARCHITECTURE.md) · [Configuración](docs/CONFIGURATION.md) · [Contrato de datos](docs/DATA_MODEL.md)
 
 ## Verificación
+
+**CI del 8 de octubre de 2026:** 12 pruebas aprobadas y 341/341 frames procesados tanto en Ubuntu 24.04 como en macOS 14 arm64, con Python 3.12. [Ver ejecución](https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901). La webcam física sigue pendiente.
 
 ```bash
 python -m pytest -q -W error

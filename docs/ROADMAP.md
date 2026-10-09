@@ -13,7 +13,8 @@ La prioridad es que el dueño tome decisiones con evidencia sin estar presente. 
 
 - [ ] Dataset autorizado con cámara fija: acceso y barra, horas tranquilas y congestionadas.
 - [ ] Ground truth de cruces y presencia; informe de precisión/recall, error de conteo y fragmentación de IDs.
-- [ ] Prueba con webcam física y documentación de Ubuntu sobre hardware disponible.
+- [x] Ubuntu 24.04 y macOS 14 arm64: inferencia y pipeline completo en GitHub Actions.
+- [ ] Prueba con webcam física y Ubuntu sobre hardware del piloto.
 - [ ] Indicadores de datos insuficientes: pérdidas de cámara, encuadre movido, zonas sin cobertura.
 - [ ] Validación rigurosa de configuración y final de archivo vs error de lectura.
 

@@ -46,4 +46,21 @@ Instalación editable `pip install -e '.[test]'` y comando `cafe-analytics --hel
 
 ## Límites de lo verificado
 
-No se ejecutó en Ubuntu ni con una webcam física. No se midieron precisión, recall, ID switches, error de aforo o dwell contra anotaciones humanas. La demo tiene oclusiones y recortes de cuerpos. La prueba de funcionamiento no certifica exactitud comercial. Para un piloto, fijar la cámara, definir accesos reales y comparar manualmente cruces y permanencias durante una muestra representativa.
+En la entrega inicial del 3 de octubre no se ejecutó en Ubuntu ni con una webcam física. La publicación del 8 de octubre añade la prueba de Ubuntu en CI, detallada abajo; webcam física sigue pendiente. No se midieron precisión, recall, ID switches, error de aforo o dwell contra anotaciones humanas. La demo tiene oclusiones y recortes de cuerpos. La prueba de funcionamiento no certifica exactitud comercial. Para un piloto, fijar la cámara, definir accesos reales y comparar manualmente cruces y permanencias durante una muestra representativa.
+
+## Publicación pública y CI — 8 de octubre de 2026
+
+Ejecución: [GitHub Actions 37886562901](https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901), commit `d9398fc406404f26b3c294e535585dcb1ebb841a`. Los registros usan UTC del 9 de octubre; corresponden a la noche del 8 de octubre en America/Mexico_City.
+
+| Entorno alojado por GitHub | Tests | Frames procesados/decodificados | IDs confirmados | Muestras | Cruces | FPS de procesamiento |
+|---|---:|---:|---:|---:|---:|---:|
+| Ubuntu 24.04, Python 3.12 | 12 aprobados | 341 / 341 | 31 | 5,078 | 1 | 4.84 |
+| macOS 14 arm64, Python 3.12 | 12 aprobados | 341 / 341 | 30 | 5,002 | 1 | 2.90 |
+
+Ambos entornos instalaron desde `pyproject.toml`, descargaron los assets oficiales, verificaron sus hashes, ejecutaron inferencia real y aprobaron el verificador completo de video/CSV/JSON/heatmap. La verificación de documentación aprobó 18 archivos y 53 destinos locales. Los artefactos de cada ejecución están disponibles temporalmente en Actions.
+
+**Reproducibilidad funcional, no identidad numérica entre plataformas:** Ubuntu produjo 31 IDs y macOS 30 en el mismo clip. El origen preciso de la diferencia no se investigó en esta publicación. No se promete una salida idéntica entre runtimes/hardware, y los IDs no deben usarse como conteo exacto de clientes únicos. El protocolo de piloto debe medir error en el entorno de despliegue. Los FPS de runners compartidos no son comparables directamente con la referencia local.
+
+La nueva ejecución local se detuvo por esperas de lectura de archivos en el entorno existente; no se contó como una prueba aprobada. La evidencia de esta publicación proviene de los runners completos de GitHub y de la ejecución local histórica documentada arriba.
+
+GitHub Pages publicó la demo por HTTPS. Se revisaron los destinos locales antes de publicar. No se efectuó una auditoría de seguridad ni validación comercial de exactitud.
