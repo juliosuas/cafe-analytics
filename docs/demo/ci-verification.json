@@ -1,7 +1,7 @@
 {
   "date_local": "2026-10-08",
   "timezone": "America/Mexico_City",
-  "run_url": "https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901",
+  "run_url": "https://github.com/juliosuas/pulso-local/actions/runs/37886562901",
   "tested_commit": "d9398fc406404f26b3c294e535585dcb1ebb841a",
   "conclusion": "success",
   "jobs": [

@@ -24,7 +24,7 @@ include = ["cafe_analytics*"]
 testpaths = ["tests"]
 
 [project.urls]
-Homepage = "https://juliosuas.github.io/cafe-analytics/"
-Repository = "https://github.com/juliosuas/cafe-analytics"
-Documentation = "https://github.com/juliosuas/cafe-analytics/tree/main/docs"
-Issues = "https://github.com/juliosuas/cafe-analytics/issues"
+Homepage = "https://juliosuas.github.io/pulso-local/"
+Repository = "https://github.com/juliosuas/pulso-local"
+Documentation = "https://github.com/juliosuas/pulso-local/tree/main/docs"
+Issues = "https://github.com/juliosuas/pulso-local/issues"

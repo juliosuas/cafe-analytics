@@ -6,16 +6,16 @@
 
 Antes Café Analytics. Analytics local de personas para cafeterías, tiendas y otros pequeños negocios. Convierte video en evidencia de ocupación, permanencia y flujo para apoyar decisiones de operación.
 
-[**Ver demo con video →**](https://juliosuas.github.io/cafe-analytics/) · [Guía de instalación](docs/USAGE.es.md) · [Para dueños de negocio](docs/OWNER_GUIDE.md) · [Roadmap](docs/ROADMAP.md)
+[**Ver demo con video →**](https://juliosuas.github.io/pulso-local/) · [Guía de instalación](docs/USAGE.es.md) · [Para dueños de negocio](docs/OWNER_GUIDE.md) · [Roadmap](docs/ROADMAP.md)
 
-[![Tests](https://github.com/juliosuas/cafe-analytics/actions/workflows/tests.yml/badge.svg)](https://github.com/juliosuas/cafe-analytics/actions/workflows/tests.yml)
+[![Tests](https://github.com/juliosuas/pulso-local/actions/workflows/tests.yml/badge.svg)](https://github.com/juliosuas/pulso-local/actions/workflows/tests.yml)
 ![Python 3.10–3.13](https://img.shields.io/badge/Python-3.10–3.13-3776AB?logo=python&logoColor=white)
 ![License Apache 2.0](https://img.shields.io/badge/Código-Apache%202.0-168273)
 ![Stage MVP](https://img.shields.io/badge/Estado-MVP%20local-E5A345)
 
 </div>
 
-[![Pulso Local: tres negocios y datos simulados](docs/showcase/poster.jpg)](https://juliosuas.github.io/cafe-analytics/#operacion)
+[![Pulso Local: tres negocios y datos simulados](docs/showcase/poster.jpg)](https://juliosuas.github.io/pulso-local/#operacion)
 
 > **Estado actual:** MVP que analiza archivos locales y ofrece captura opcional de webcam. El monitoreo desatendido, las alertas y los reportes diarios automáticos son la siguiente etapa; todavía no están implementados. Las personas del video no respaldan este proyecto.
 
@@ -48,15 +48,15 @@ El MVP construye la base medible de ese producto. Separa tres cosas: lo que la c
 
 ## Video principal: tres negocios, datos simulados
 
-La [portada](https://juliosuas.github.io/cafe-analytics/) presenta un solo video de **27 segundos**: cafetería, restaurante/bar y tienda. Usa grabaciones reales con tarjetas de **datos ficticios** para mostrar la dirección del producto (permanencia, pedidos, bebidas, visitas y compras). El rótulo «DEMO ILUSTRATIVA · DATOS SIMULADOS» permanece incrustado durante todo el video, incluso en pantalla completa.
+La [portada](https://juliosuas.github.io/pulso-local/) presenta un solo video de **27 segundos**: cafetería, restaurante/bar y tienda. Usa grabaciones reales con tarjetas de **datos ficticios** para mostrar la dirección del producto (permanencia, pedidos, bebidas, visitas y compras). El rótulo «DEMO ILUSTRATIVA · DATOS SIMULADOS» permanece incrustado durante todo el video, incluso en pantalla completa.
 
-Las **tarjetas de negocio son ficticias**. Los cuadros e IDs temporales sí proceden del detector de personas; se reinician en cada escena y no identifican rostros ni asignan roles. No se atribuyen pedidos ni bebidas reales a las personas de los clips. Las ejecuciones verificadas se conservan en [flow](https://juliosuas.github.io/cafe-analytics/flow/report.html), [barra](https://juliosuas.github.io/cafe-analytics/cafe/report.html) y [retail](https://juliosuas.github.io/cafe-analytics/report.html).
+Las **tarjetas de negocio son ficticias**. Los cuadros e IDs temporales sí proceden del detector de personas; se reinician en cada escena y no identifican rostros ni asignan roles. No se atribuyen pedidos ni bebidas reales a las personas de los clips. Las ejecuciones verificadas se conservan en [flow](https://juliosuas.github.io/pulso-local/flow/report.html), [barra](https://juliosuas.github.io/pulso-local/cafe/report.html) y [retail](https://juliosuas.github.io/pulso-local/report.html).
 
 Guion de la demo en [scenario.json](docs/showcase/scenario.json); render reproducible con `python scripts/render_showcase_tracking.py` seguido de `python scripts/render_marketing_demo.py --tracking-dir runs/showcase-tracking`, y FFmpeg con drawtext. Rutas de entrada y descargas en [SOURCES.md](SOURCES.md). En Ubuntu pasa `--font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf --bold-font /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf`; macOS usa Arial del sistema. No añade dependencias al motor.
 
 ## Demo de cafetería de barra
 
-[Ver demo técnica de barra](https://juliosuas.github.io/cafe-analytics/cafe/report.html) · [Resumen para el dueño](https://juliosuas.github.io/cafe-analytics/cafe/owner.html) · [Reporte técnico](https://juliosuas.github.io/cafe-analytics/cafe/report.html)
+[Ver demo técnica de barra](https://juliosuas.github.io/pulso-local/cafe/report.html) · [Resumen para el dueño](https://juliosuas.github.io/pulso-local/cafe/owner.html) · [Reporte técnico](https://juliosuas.github.io/pulso-local/cafe/report.html)
 
 ![Detecciones y zonas de barra](docs/cafe/preview.jpg)
 
@@ -64,11 +64,11 @@ Guion de la demo en [scenario.json](docs/showcase/scenario.json); render reprodu
 
 Cada ejecución produce ahora `occupancy.csv`, `owner-summary.json` y `owner.html`: ocupación por fotograma, primeros máximos con enlace al video, hechos observados y preguntas de revisión. La media de permanencia conserva episodios parciales; no se transforma en espera ni en recomendación de personal.
 
-La primera [demo de supermercado](https://juliosuas.github.io/cafe-analytics/report.html) sigue disponible: Suika Chan / Pexels 10901926, 341 fotogramas. [Ejecuciones, resultados y límites](VERIFICATION.md).
+La primera [demo de supermercado](https://juliosuas.github.io/pulso-local/report.html) sigue disponible: Suika Chan / Pexels 10901926, 341 fotogramas. [Ejecuciones, resultados y límites](VERIFICATION.md).
 
 ## Dos superficies, una dirección
 
-- **[Web pública](https://juliosuas.github.io/cafe-analytics/):** utilidad para el dueño, video real, resumen de sesión y seis casos de negocio explorables.
+- **[Web pública](https://juliosuas.github.io/pulso-local/):** utilidad para el dueño, video real, resumen de sesión y seis casos de negocio explorables.
 - **GitHub:** motor, configuración, pruebas y backlog técnico. Los casos de panadería, comida para llevar, tienda, barbería/salón y lavandería son hipótesis por validar, no clientes ni beneficios demostrados.
 
 [Dirección de producto y prioridades técnicas](docs/PRODUCT_STRATEGY.md).
@@ -78,8 +78,8 @@ La primera [demo de supermercado](https://juliosuas.github.io/cafe-analytics/rep
 Recomendado: Python 3.12, FFmpeg y cámara fija o video propio. La primera instalación necesita internet. Los modelos y el video original se descargan por separado y se verifican con SHA256.
 
 ```bash
-git clone https://github.com/juliosuas/cafe-analytics.git
-cd cafe-analytics
+git clone https://github.com/juliosuas/pulso-local.git
+cd pulso-local
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[test]'
@@ -128,7 +128,7 @@ flowchart LR
 
 **0.1.1, ejecución local del 8 de octubre:** 25 tests aprobados y 900/900 frames de cafetería procesados y verificados. El filtro calibrado redujo de 6 a 2 IDs en ese clip; no es un benchmark independiente. [Antes/después y evidencia](VERIFICATION.md#demo-de-barra-y-mejoras-011--8-de-octubre-de-2026).
 
-**CI del 8 de octubre de 2026:** 12 pruebas aprobadas y 341/341 frames procesados tanto en Ubuntu 24.04 como en macOS 14 arm64, con Python 3.12. [Ver ejecución](https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901). La webcam física sigue pendiente.
+**CI del 8 de octubre de 2026:** 12 pruebas aprobadas y 341/341 frames procesados tanto en Ubuntu 24.04 como en macOS 14 arm64, con Python 3.12. [Ver ejecución](https://github.com/juliosuas/pulso-local/actions/runs/37886562901). La webcam física sigue pendiente.
 
 ```bash
 python scripts/download_assets.py  # añade retail para las pruebas de inferencia

@@ -50,7 +50,7 @@ En la entrega inicial del 3 de octubre no se ejecutó en Ubuntu ni con una webca
 
 ## Publicación pública y CI — 8 de octubre de 2026
 
-Ejecución: [GitHub Actions 37886562901](https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901), commit `d9398fc406404f26b3c294e535585dcb1ebb841a`. Los registros usan UTC del 9 de octubre; corresponden a la noche del 8 de octubre en America/Mexico_City.
+Ejecución: [GitHub Actions 37886562901](https://github.com/juliosuas/pulso-local/actions/runs/37886562901), commit `d9398fc406404f26b3c294e535585dcb1ebb841a`. Los registros usan UTC del 9 de octubre; corresponden a la noche del 8 de octubre en America/Mexico_City.
 
 | Entorno alojado por GitHub | Tests | Frames procesados/decodificados | IDs confirmados | Muestras | Cruces | FPS de procesamiento |
 |---|---:|---:|---:|---:|---:|---:|
@@ -105,7 +105,7 @@ Fuente Pexels 35545660, SHA256 documentado en SOURCES.md. Ejecución completa lo
 
 Validación local: 25 tests pasan (8.13 s); verificador de documentación: 23 archivos, 111 destinos locales. Navegador: exactamente un video y cero iframes, H.264 reproducido, duración 10.276944 s, readyState 4, muted=true y reproducción en progreso. Se comprueban pausa/reanudación y diseño móvil antes de publicar.
 
-La ejecución CI anterior del mismo motor, [37889503348](https://github.com/juliosuas/cafe-analytics/actions/runs/37889503348), completó en Ubuntu 24.04 y macOS 14 arm64: 25 tests por plataforma, ambos clips completos (retail 341 frames y barra 900 frames) y verificadores aprobados. Ese CI no incluye el nuevo clip de portada; este último fue ejecutado y verificado localmente.
+La ejecución CI anterior del mismo motor, [37889503348](https://github.com/juliosuas/pulso-local/actions/runs/37889503348), completó en Ubuntu 24.04 y macOS 14 arm64: 25 tests por plataforma, ambos clips completos (retail 341 frames y barra 900 frames) y verificadores aprobados. Ese CI no incluye el nuevo clip de portada; este último fue ejecutado y verificado localmente.
 
 ## Pulso Local y selección de video · 9 de octubre de 2026
 

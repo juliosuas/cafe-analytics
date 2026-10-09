@@ -46,4 +46,4 @@ Revisar primero tasa de cobertura, errores de conteo y pérdida de IDs. Acordar 
 
 ## Explorar otros negocios
 
-La [web pública](https://juliosuas.github.io/cafe-analytics/#negocios) traduce el método a seis giros con preguntas y datos faltantes. [Estrategia y backlog](PRODUCT_STRATEGY.md) explica cómo validar cada caso sin reutilizar ciegamente las zonas o conclusiones de una cafetería.
+La [web pública](https://juliosuas.github.io/pulso-local/#negocios) traduce el método a seis giros con preguntas y datos faltantes. [Estrategia y backlog](PRODUCT_STRATEGY.md) explica cómo validar cada caso sin reutilizar ciegamente las zonas o conclusiones de una cafetería.

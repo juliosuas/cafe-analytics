@@ -2,7 +2,7 @@
 
 Detecta personas en un video o webcam, mantiene IDs durante la sesión y calcula actividad por zonas. Todo se procesa en tu computadora. No utiliza reconocimiento facial, embeddings de identidad ni inferencia de género, edad o emociones.
 
-**Para ver el resultado sin instalar nada:** abre la [demo pública](https://juliosuas.github.io/cafe-analytics/) o `docs/report.html` desde un clon del repositorio. Incluye un video real de supermercado ya procesado, heatmap, trayectorias y enlaces a CSV/JSON. El archivo `docs/media/demo.mp4` también abre directamente en QuickTime o VLC.
+**Para ver el resultado sin instalar nada:** abre la [demo pública](https://juliosuas.github.io/pulso-local/) o `docs/report.html` desde un clon del repositorio. Incluye un video real de supermercado ya procesado, heatmap, trayectorias y enlaces a CSV/JSON. El archivo `docs/media/demo.mp4` también abre directamente en QuickTime o VLC.
 
 ## Qué incluye
 
@@ -23,7 +23,7 @@ Si ya tienes Homebrew:
 brew install python@3.12 ffmpeg
 ```
 
-Desde la raíz del repositorio `cafe-analytics`:
+Desde la raíz del repositorio `pulso-local`:
 
 ```bash
 python3.12 -m venv .venv

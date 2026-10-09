@@ -5,8 +5,8 @@ El objetivo es ayudar a dueños de cafeterías y tiendas a decidir con evidencia
 ## Desarrollo local
 
 ```bash
-git clone https://github.com/juliosuas/cafe-analytics.git
-cd cafe-analytics
+git clone https://github.com/juliosuas/pulso-local.git
+cd pulso-local
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[test]'
