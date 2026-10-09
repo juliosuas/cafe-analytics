@@ -28,3 +28,7 @@ Primera publicación pública del MVP local construido y probado inicialmente el
 ### Límites conocidos
 
 Los IDs pueden fragmentarse/intercambiarse con oclusiones. La captura webcam es opcional y no se verificó con hardware físico en la entrega inicial. El MP4 de webcam se escribe a FPS nominales. No hay monitoreo desatendido, alertas remotas, comparaciones diarias, POS ni métricas de espera validadas. Véase el roadmap.
+
+### Presentación de video y próxima capacidad
+
+La portada incorpora el reproductor original de una sesión de Artisti Coffee Roasters (29:09) como referencia de operación real. Se separa explícitamente de la demo procesada del MVP. Tazas preparadas/entregadas/retiradas quedan documentadas como capacidad pendiente; no se muestran conteos ficticios.

@@ -92,3 +92,7 @@ Evidencia publicada: [verificación](docs/cafe/verification.json), [comparación
 ### Interfaz de 0.1.1
 
 Navegador integrado: seis opciones de giro cambian pregunta/señal/acción/dato faltante con una sola selección activa. Portada y resumen revisados a 390 px sin desbordamiento horizontal. Reproductor del resumen: duración 36 s, `readyState=4`, reproducción comprobada más allá de 12 s y sin error de medio. Preview, heatmap y trayectorias cargaron correctamente. El verificador de documentación comprobó 21 archivos y 90 destinos locales.
+
+### Referencia audiovisual de operación
+
+A petición del usuario, la portada presenta un reproductor real de Artisti Coffee Roasters (29:09) en vez de una imagen estática. Se verificó reproducción del video original y visualmente la llegada a barra con vasos visibles en 14:34. El iframe cargó su reproductor y aceptó reproducción en la vista local. No se ejecutó analítica ni se generaron conteos de tazas sobre ese material. Véase [procedencia](SOURCES.md).

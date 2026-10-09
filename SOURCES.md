@@ -43,3 +43,12 @@ Se conserva la licencia y atribución del proyecto oficial que distribuye los pe
 - Derivados de análisis publicados en `docs/cafe/`: video con anotaciones y sin audio, preview, mapas, reportes y datos. No se relicencia el material audiovisual como Apache-2.0. Las personas y marcas del clip no respaldan este proyecto.
 - Es material de stock para una demostración técnica: encuadre cercano, oclusiones y cuerpos recortados. No es CCTV, un caso de éxito ni evidencia de la operación diaria de esa cafetería. No se evalúa a las personas retratadas ni se presentan fallas de su servicio.
 - Configuración: `configs/cafe-counter.json`, ancla en centro de caja por pies ocultos. Zonas de imagen a ambos lados de la barra, sin líneas de entrada/salida ni clasificación empleado/cliente. El centro no reconstruye una posición física sobre el piso.
+
+## Referencia de operación real (no procesada por el MVP)
+
+- **Autor:** Artisti Coffee Roasters. **Video:** See how a professional barista makes coffee working solo, duración observada en el reproductor 29:09.
+- Reproductor original: https://www.youtube.com/watch?v=RKAva1OK8i4
+- Publicación del autor: https://artisti.com.au/blogs/training/working-solo-in-a-busy-espresso-bar-barista-work-flow-and-multi-tasking
+- El autor describe aproximadamente 30 minutos atendiendo pedidos y preparando café durante la mañana. Inspección visual: en 14:34 se ve llegada a la barra y vasos sobre el mostrador; en otros momentos se ve preparación en la máquina.
+- Se muestra mediante el reproductor de YouTube, empezando en 14:34. **No se descargó, modificó ni republicó el video. No se encontró una licencia permisiva para incorporarlo como dataset o asset del repositorio.** Es una referencia de observación, no nuestra demo analizada ni una relación comercial con el autor.
+- Tiene cambios de encuadre; no es una grabación continua de una sola cámara para medir trayectorias o tiempos sin segmentación. No se publican conteos inferidos de tazas, clientes o pedidos sobre ese video.

@@ -60,3 +60,12 @@ La prioridad es que el dueño tome decisiones con evidencia sin estar presente. 
 ## Fuera de alcance
 
 Reconocimiento facial, clasificación de edad/género/emoción, identidad entre visitas, vigilancia individual del desempeño, inferencia de intención delictiva o decisiones automáticas de sanción. El foco es la operación del negocio.
+
+## Extensión solicitada: flujo de bebidas
+
+- [x] Referencia de servicio real visible como video en la portada, con fuente y alcance separados de la demo de IA.
+- [ ] Video autorizado y fijo con preparación y entrega visibles.
+- [ ] Detección/tracking de taza o vaso; eventos únicos de puesta en entrega y retirada, con tratamiento de oclusiones y devoluciones.
+- [ ] Validación manual de preparación/entrega antes de presentar conteos o tiempos como métricas del negocio.
+
+Esta extensión sigue pendiente; un video del proceso no significa que el software reconozca esas acciones.

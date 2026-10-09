@@ -57,3 +57,17 @@ Primero demostrar que un dueño de cafetería puede contestar una pregunta opera
 La ejecución inicial sin filtro generó 6 IDs y un pico de 3 en la zona frente a barra. La inspección del fotograma 90 mostró una figura impresa del fondo detectada como persona. Esto no describe un problema de atención del comercio: es un error del modelo sobre material visual.
 
 Se añadió `min_person_height`, desactivado por defecto y fijado a `0.20` solo en esta demo. Se conserva una imagen del resultado anterior junto al resultado corregido en la evidencia técnica. La comparación es una calibración sobre el mismo clip, no una evaluación independiente ni prueba de generalización. Los siguientes clips deben medir también personas reales omitidas por este filtro.
+
+## Flujo de clientes y bebidas: la próxima capacidad solicitada
+
+La portada muestra una [sesión real de Artisti Coffee Roasters](https://www.youtube.com/watch?v=RKAva1OK8i4&t=874s) mediante su reproductor original. Es referencia de la operación que queremos entender, no salida de nuestros modelos. Su licencia no se asume permisiva y no forma parte del dataset descargable.
+
+El objetivo operativo se amplía a **personas → preparación de bebida → puesta en entrega → retirada**. Para implementarlo con evidencia:
+
+1. Conseguir una grabación autorizada de cámara fija que muestre acceso/flujo, estación de preparación y punto de entrega; puede requerir dos vistas sincronizadas.
+2. Detectar y seguir tazas/vasos por separado de personas. Contar una misma taza en 100 frames debe producir un objeto, no 100 bebidas.
+3. Definir eventos observables: objeto entra a estación, sale hacia entrega, queda disponible, se retira. Ver una taza no demuestra que se preparó un café; retirarla no demuestra pago.
+4. Etiquetar manualmente una muestra y distinguir devolución, reutilización, tazas vacías, jarras, bandejas, oclusiones y varios vasos en un mismo pedido.
+5. Comparar conteos de eventos y tiempos contra esa referencia; cruzar POS si la pregunta es venta o conversión.
+
+**Estado:** detección de tazas y esos eventos aún no implementados. La demo procesada de 36 s continúa limitada a personas/zonas. Medimos la operación agregada, no desempeño individual del barista.
