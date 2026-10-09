@@ -47,3 +47,11 @@ Zonas superpuestas cuentan a la misma persona en ambas. Puntos sobre el borde se
 | `--preview` | Desactivado | Ventana local; Q termina |
 
 Los valores deben satisfacer `0 < low-score <= confidence < 1`. Expiración de pista 1 s, confirmación 3 detecciones y hueco analítico 0.5 s son parámetros internos actuales, no opciones del CLI.
+
+## Filtro de tamaño por cámara (0.1.1)
+
+`min_person_height` es opcional: fracción de la altura de imagen que debe ocupar una caja detectada. Valor por defecto `0` (desactivado); rango `[0, 1)`. Se aplica después del detector y antes del tracker, tanto en video como webcam. Una caja exactamente en el límite se conserva.
+
+La demo de barra usa `0.20`: en la primera ejecución una figura impresa del fondo produjo detecciones pequeñas; el filtro permite excluirlas en este encuadre. **No es un detector de carteles ni una calibración universal.** Puede excluir personas reales pequeñas, lejanas o parcialmente tapadas. Debe contrastarse con anotaciones del local y volver a revisarse si cambia el encuadre. Para medir distancias o una escena profunda se requerirá una calibración más adecuada.
+
+`summary.json.size_filter` registra el umbral y `discarded_detection_samples`: cantidad de cajas descartadas a través de fotogramas, no número de personas ni falsos positivos confirmados. La prueba de regresión del video de barra verifica dos personas visibles en un fotograma inspeccionado, no precisión en todas las escenas.

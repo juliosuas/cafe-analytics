@@ -45,6 +45,30 @@ def verify(directory):
     assert abs(heat.sum() - sum(float(p["observed_seconds"]) for p in people)) < 1e-6
     for name in ("preview.jpg", "heatmap.jpg", "trajectories.jpg"):
         assert cv2.imread(str(root / name)) is not None
+    # Added in 0.1.1; old archived runs remain verifiable without these files.
+    if (root / "owner-summary.json").exists():
+        brief = json.loads((root / "owner-summary.json").read_text())
+        timeline = read_csv(root / "occupancy.csv")
+        assert brief["run_id"] == summary["run_id"]
+        assert brief["frames_processed"] == decoded
+        assert len(timeline) == decoded * len(summary["zones"])
+        for z in brief["zones"]:
+            rows = [r for r in timeline if r["zone"] == z["zone"]]
+            assert [int(r["frame"]) for r in rows] == list(range(decoded))
+            assert all(r["run_id"] == summary["run_id"] for r in rows)
+            counts = [int(r["observed_occupancy"]) for r in rows]
+            assert all(n >= 0 for n in counts)
+            assert max(counts) == z["peak_observed_occupancy"]
+            assert sum(n > 0 for n in counts) == z["frames_with_presence"]
+            assert abs(z["presence_frame_fraction"] - sum(n > 0 for n in counts) / decoded) < 1e-9
+            if max(counts):
+                first = counts.index(max(counts))
+                assert first == z["first_peak_frame"]
+                assert abs(float(rows[first]["time_s"]) - z["first_peak_time_s"]) < 1e-6
+            else:
+                assert z["first_peak_time_s"] is None and z["first_peak_frame"] is None
+        assert brief["access_flow"]["counts"] == (summary["gate_counts"] or None)
+        assert (root / "owner.html").stat().st_size > 1000
     assert (root / "report.html").stat().st_size > 1000
     result = {"passed": True, "decoded_video_frames": decoded, "confirmed_ids": len(ids), "trajectory_samples": len(paths), "crossing_events": len(events), "heatmap_person_seconds": float(heat.sum())}
     print(json.dumps(result, indent=2))

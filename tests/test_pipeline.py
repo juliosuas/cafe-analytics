@@ -67,3 +67,29 @@ def test_webcam_branch_with_recorded_source_and_unknown_fps(monkeypatch, tmp_pat
     assert summary["video_codec"] == "mp4v"
     assert summary["confirmed_track_ids"] > 0
     assert (out / "report.html").exists()
+    import csv
+    with (out / "occupancy.csv").open() as f:
+        rows = list(csv.DictReader(f))
+    assert len(rows) == 6 * len(summary["zones"])
+    assert {int(row["frame"]) for row in rows} == set(range(6))
+    brief = json.loads((out / "owner-summary.json").read_text())
+    assert brief["coverage"]["timestamp_mode"] == "monotonic_capture"
+    assert (out / "owner.html").exists()
+
+
+@pytest.mark.skipif(not (ROOT / "assets/cafe-counter.mp4").exists(), reason="Descarga --demo cafe para regresion de figuras impresas")
+def test_cafe_poster_filter_preserves_two_visible_people():
+    from cafe_analytics.detector import filter_by_height
+    cap = cv2.VideoCapture(str(ROOT / "assets/cafe-counter.mp4"))
+    cap.set(cv2.CAP_PROP_POS_FRAMES, 90)
+    ok, frame = cap.read()
+    cap.release()
+    assert ok
+    frame = cv2.resize(frame, (960, 506))
+    detections = Detector(MODEL)(frame)
+    filtered = filter_by_height(detections, 506, 0.2)
+    # Manually inspected frame: two physical people and a small printed figure.
+    strong = filtered[filtered[:, 4] >= 0.4]
+    assert len(strong) == 2
+    assert len(filtered) < len(detections)
+    assert sum((b[0] + b[2]) / 2 < 480 for b in strong) == 1

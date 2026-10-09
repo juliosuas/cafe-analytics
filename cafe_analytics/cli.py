@@ -11,9 +11,10 @@ import uuid
 import cv2
 import numpy as np
 from .analytics import Analytics, anchor, validate_config
-from .detector import Detector
+from .detector import Detector, filter_by_height
 from .tracker import Tracker
 from .report import color, draw_config, save_report
+from .owner import SessionEvidence, save_owner_brief
 
 
 def run(args):
@@ -46,9 +47,11 @@ def run(args):
     out.mkdir(parents=True, exist_ok=True)
     (out / "config.json").write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8")
     analytics = Analytics(config)
+    evidence = SessionEvidence(config["zones"])
     tracker = Tracker(high_score=args.confidence)
     run_id = str(uuid.uuid4())
     processed = frame_index = 0
+    filtered_detections = 0
     writer = None
     start = time.monotonic()
     first_capture = None
@@ -60,6 +63,9 @@ def run(args):
     path_file = (out / "trajectories.csv").open("w", newline="", encoding="utf-8")
     paths = csv.writer(path_file)
     paths.writerow(["run_id", "frame", "time_s", "track_id", "x_normalized", "y_normalized", "confidence"])
+    occupancy_file = (out / "occupancy.csv").open("w", newline="", encoding="utf-8")
+    occupancy_rows = csv.writer(occupancy_file)
+    occupancy_rows.writerow(["run_id", "frame", "time_s", "zone", "observed_occupancy"])
     try:
         while True:
             ok, original = cap.read()
@@ -86,9 +92,15 @@ def run(args):
                 if not writer.isOpened():
                     raise RuntimeError("No se pudo crear el video MP4")
             detections = detector(frame)
+            accepted = filter_by_height(detections, height, config.get("min_person_height", 0))
+            filtered_detections += len(detections) - len(accepted)
+            detections = accepted
             tracks = tracker.update(detections, timestamp)
             observations = [(t.id, anchor(t.box, args.width, height, config.get("anchor", "bottom_center"))) for t in tracks]
             occupancy = analytics.update(observations, timestamp)
+            evidence.update(occupancy, timestamp, frame_index)
+            for name, count in occupancy.items():
+                occupancy_rows.writerow([run_id, frame_index, f"{timestamp:.6f}", name, count])
             draw_config(frame, config)
             for track, (_, point) in zip(tracks, observations):
                 pixel = tuple((point * [args.width, height]).astype(int))
@@ -131,6 +143,7 @@ def run(args):
         if writer:
             writer.release()
         path_file.close()
+        occupancy_file.close()
         if args.preview:
             cv2.destroyAllWindows()
     if not processed:
@@ -157,7 +170,10 @@ def run(args):
                "scene_note": config.get("scene_note", "Usa camara fija y calibra las zonas y el acceso real."),
                "webcam_playback_note": "Webcam: MP4 a FPS nominales; tiempos reales en CSV/JSON." if webcam else None,
                "max_observation_gap_s": analytics.max_gap, "config": config}
+    summary["size_filter"] = {"min_person_height": config.get("min_person_height", 0),
+                              "discarded_detection_samples": filtered_detections}
     save_report(out, summary, analytics, background, trajectory_image)
+    save_owner_brief(out, summary, evidence)
     print(json.dumps({"report": str(out / "report.html"), "frames": processed, "ids": len(analytics.people), "fps": round(processed / elapsed, 2)}, ensure_ascii=False))
 
 

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "run_id": "97c88547-33a9-4a59-b512-18fb381b01bd",
+  "scope": "session",
+  "video_seconds": 36.0,
+  "frames_processed": 900,
+  "business_conclusions": "insufficient_evidence",
+  "coverage": {
+    "kind": "processed_frames_only",
+    "business_day_fraction": null,
+    "timestamp_mode": "container_pts",
+    "stop_reason": "end_of_file"
+  },
+  "access_flow": {
+    "status": "not_configured",
+    "counts": null
+  },
+  "zones": [
+    {
+      "zone": "lado_interior_barra",
+      "observed_person_seconds": 35.879999999999995,
+      "peak_observed_occupancy": 1,
+      "first_peak_time_s": 0.08,
+      "first_peak_frame": 2,
+      "frames_with_presence": 898,
+      "presence_frame_fraction": 0.9977777777777778,
+      "visits": 1,
+      "censored_visits": 1,
+      "mean_observed_visit_s": 35.879999999999995,
+      "review_question": "¿Qué ocurre en esta zona cuando alcanza su máximo observado?",
+      "next_step": "Revisar el fragmento y anotar el contexto antes de cambiar la operación."
+    },
+    {
+      "zone": "frente_barra",
+      "observed_person_seconds": 29.279999999999998,
+      "peak_observed_occupancy": 1,
+      "first_peak_time_s": 0.08,
+      "first_peak_frame": 2,
+      "frames_with_presence": 733,
+      "presence_frame_fraction": 0.8144444444444444,
+      "visits": 1,
+      "censored_visits": 1,
+      "mean_observed_visit_s": 29.279999999999998,
+      "review_question": "¿Qué ocurre en esta zona cuando alcanza su máximo observado?",
+      "next_step": "Revisar el fragmento y anotar el contexto antes de cambiar la operación."
+    }
+  ],
+  "limitations": [
+    "Es un resumen de esta sesión, no un reporte diario ni una comparación histórica.",
+    "La precisión en este local y la cobertura de la jornada no están validadas.",
+    "No distingue empleados de clientes; los IDs pueden fragmentarse o intercambiarse.",
+    "Permanencia no equivale a espera, atención, compra ni abandono.",
+    "La media incluye visitas parciales; el cierre de una visita no garantiza que se vio su inicio.",
+    "La presencia se expresa por fotogramas, no como porcentaje del tiempo ni de capacidad.",
+    "Filtro de esta cámara: altura mínima de caja 20% de la imagen. Puede omitir personas pequeñas o lejanas; requiere validación independiente."
+  ],
+  "scene_note": "Demo ilustrativa de barra: Ron Lach / Pexels 8430969. Encuadre cercano, cuerpos ocultos y clip de 36 s; no representa un dia de operacion. Usamos centro de caja, no posicion de pies. Las zonas son regiones de imagen, no roles: no distingue empleados de clientes. Sin acceso visible, no se configuran entradas/salidas. Permanencia no equivale a espera ni atencion.",
+  "size_filter": {
+    "min_person_height": 0.2,
+    "discarded_detection_samples": 1126
+  },
+  "evidence": {
+    "video": "annotated.mp4",
+    "timeline": "occupancy.csv",
+    "summary": "summary.json",
+    "visits": "visits.csv"
+  }
+}

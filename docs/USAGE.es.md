@@ -147,3 +147,17 @@ python scripts/verify_run.py runs/mi-demo
 ## Licencias y fuente
 
 El código propio y YOLOX usan Apache-2.0; ONNX Runtime usa MIT; NumPy/SciPy usan BSD. El video conserva la licencia de Pexels. Consulta `THIRD_PARTY.md`, `SOURCES.md`, `NOTICE` y `licenses/` para procedencia, hashes y condiciones de redistribución. No se instala Ultralytics ni se usa su licencia AGPL.
+
+## Demo de barra y resumen para el dueño (0.1.1)
+
+Con el entorno de macOS o Ubuntu activado:
+
+```bash
+python scripts/download_assets.py --demo cafe
+cafe-analytics run --source assets/cafe-counter.mp4 --config configs/cafe-counter.json --output runs/barra-01
+python scripts/verify_run.py runs/barra-01
+```
+
+Abre `runs/barra-01/owner.html` para una lectura orientada al dueño, o `report.html` para el reporte técnico. Cada nueva ejecución genera también `owner-summary.json` y `occupancy.csv`. El MP4 completo incluye 900 fotogramas; la velocidad depende del equipo. El original es UHD (~106 MiB), pero la inferencia usa el ancho configurado (960 por defecto).
+
+El clip muestra atención en barra y no un acceso: entradas/salidas están **no disponibles**. Las zonas son ilustrativas y usan centro de caja. No copies su geometría a otra cámara: crea tu configuración con el editor. El resumen no es una medición de espera ni un reporte diario automático. [Casos y dirección del proyecto](PRODUCT_STRATEGY.md).

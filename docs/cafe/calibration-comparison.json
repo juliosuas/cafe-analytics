@@ -1,0 +1,65 @@
+{
+  "description": "Calibración sobre el mismo clip; no benchmark independiente de precisión.",
+  "source": "Pexels 8430969",
+  "source_sha256": "37c732b261d16cf8fe23b6a2f4745b0c321b18c5b7680657ed2e47ab0e28cebd",
+  "before": {
+    "run_id": "d365636c-7ec8-4e5f-8972-45371240da6f",
+    "confirmed_track_ids": 6,
+    "frames_processed": 900,
+    "zones": [
+      {
+        "zone": "lado_interior_barra",
+        "track_ids": 1,
+        "visits": 1,
+        "observed_person_seconds": 35.879999999999995,
+        "mean_observed_visit_s": 35.879999999999995,
+        "censored_visits": 1,
+        "peak_observed_occupancy": 1
+      },
+      {
+        "zone": "frente_barra",
+        "track_ids": 5,
+        "visits": 8,
+        "observed_person_seconds": 67.16000000000001,
+        "mean_observed_visit_s": 8.395000000000001,
+        "censored_visits": 8,
+        "peak_observed_occupancy": 3
+      }
+    ]
+  },
+  "after": {
+    "run_id": "97c88547-33a9-4a59-b512-18fb381b01bd",
+    "confirmed_track_ids": 2,
+    "frames_processed": 900,
+    "zones": [
+      {
+        "zone": "lado_interior_barra",
+        "track_ids": 1,
+        "visits": 1,
+        "observed_person_seconds": 35.879999999999995,
+        "mean_observed_visit_s": 35.879999999999995,
+        "censored_visits": 1,
+        "peak_observed_occupancy": 1
+      },
+      {
+        "zone": "frente_barra",
+        "track_ids": 1,
+        "visits": 1,
+        "observed_person_seconds": 29.279999999999998,
+        "mean_observed_visit_s": 29.279999999999998,
+        "censored_visits": 1,
+        "peak_observed_occupancy": 1
+      }
+    ],
+    "size_filter": {
+      "min_person_height": 0.2,
+      "discarded_detection_samples": 1126
+    }
+  },
+  "manual_check": {
+    "frame": 90,
+    "time_s": 3.6,
+    "physical_people_visible": 2,
+    "finding": "Figura impresa pequeña detectada como persona antes del filtro; ambas personas físicas conservadas después."
+  }
+}

@@ -1,0 +1,3 @@
+zone,track_ids,visits,observed_person_seconds,mean_observed_visit_s,censored_visits,peak_observed_occupancy
+lado_interior_barra,1,1,35.879999999999995,35.879999999999995,1,1
+frente_barra,1,1,29.279999999999998,29.279999999999998,1,1

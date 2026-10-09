@@ -9,6 +9,14 @@ La prioridad es que el dueño tome decisiones con evidencia sin estar presente. 
 - [x] MP4, CSV, JSON, reporte local y demo pública con atribución.
 - [x] Pruebas de lógica, inferencia real y verificador de integridad.
 
+## v0.1.1 — Barra y evidencia para el dueño (disponible)
+
+- [x] Demo de cafetería de barra con fuente, licencia y configuración reproducible.
+- [x] Ocupación por fotograma, incluyendo ceros, y primeros máximos trazables.
+- [x] Resumen de sesión para el dueño; falta de acceso como dato no disponible.
+- [x] Web pública con seis hipótesis por giro; documentación técnica en GitHub.
+- [ ] Validación comercial de los casos: requiere pilotos específicos.
+
 ## v0.2 — Calidad y piloto en un local
 
 - [ ] Dataset autorizado con cámara fija: acceso y barra, horas tranquilas y congestionadas.

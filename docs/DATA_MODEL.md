@@ -44,3 +44,21 @@ Verificador: `python scripts/verify_run.py runs/mi-demo`. Ejecutar sin `python -
 ## Evolución prevista
 
 Añadir inicio absoluto de sesión, zona horaria, identificadores de cámara/local, cobertura y estado de salud antes de comparar días o generar reportes remotos. Cualquier cambio incompatible deberá incrementar `schema_version`; no reinterpretar archivos históricos silenciosamente.
+
+## Evidencia de sesión añadida en 0.1.1
+
+El `schema_version: 1` del resumen técnico se conserva; los nuevos archivos son adicionales.
+
+| Archivo | Campos / contenido |
+|---|---|
+| `occupancy.csv` | run_id, frame, time_s, zone, observed_occupancy; una fila por zona por fotograma procesado, incluyendo cero |
+| `owner-summary.json` | schema_version propio 1, run_id, scope=session, video_seconds, frames_processed, business_conclusions, coverage, access_flow, zones, limitations, scene_note, evidence |
+| `owner.html` | Lectura de esa sesión con enlaces al video; no reporte diario |
+
+Cada zona del resumen para el dueño conserva persona-segundos, pico, visitas, cierres parciales y media observada. Añade `first_peak_time_s`, `first_peak_frame`, `frames_with_presence`, `presence_frame_fraction` (fotogramas, no tiempo), una pregunta y un siguiente paso de revisión. Un pico de cero tiene instante y fotograma `null`.
+
+`coverage.business_day_fraction` es `null`: no se conoce la cobertura del día. `business_conclusions` es siempre `insufficient_evidence` en esta versión: un video y estas métricas no validan decisiones comerciales. `access_flow.status` distingue `not_configured` (counts=null) de `configured_lines_unvalidated` (conteos que requieren calibración). No se infieren roles.
+
+Para video, los instantes analíticos usan PTS; para webcam, reloj de captura. El enlace del reproductor usa `first_peak_frame / source_fps` para coincidir con el MP4 escrito a FPS nominales. El verificador comprueba la serie completa, sus picos y consistencia con el resumen. `occupancy.csv` tampoco garantiza continuidad de captura fuera de los fotogramas procesados.
+
+`summary.json.size_filter` (campo adicional de 0.1.1) guarda `min_person_height` y `discarded_detection_samples`. El conteo se hace antes del tracker y agrega detecciones rechazadas en fotogramas, no individuos. El resumen para el dueño copia esa información y declara el riesgo de omitir personas pequeñas cuando el filtro está activo.

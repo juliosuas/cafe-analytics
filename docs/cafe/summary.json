@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "run_id": "97c88547-33a9-4a59-b512-18fb381b01bd",
+  "source": "Ron Lach / Pexels 8430969 — Man Ordering at a Café",
+  "webcam": false,
+  "frames_processed": 900,
+  "video_seconds": 36.0,
+  "source_fps": 25.0,
+  "processing_seconds": 216.20362179202493,
+  "processing_fps": 4.162742476468533,
+  "confirmed_track_ids": 2,
+  "gate_counts": {},
+  "zones": [
+    {
+      "zone": "lado_interior_barra",
+      "track_ids": 1,
+      "visits": 1,
+      "observed_person_seconds": 35.879999999999995,
+      "mean_observed_visit_s": 35.879999999999995,
+      "censored_visits": 1,
+      "peak_observed_occupancy": 1
+    },
+    {
+      "zone": "frente_barra",
+      "track_ids": 1,
+      "visits": 1,
+      "observed_person_seconds": 29.279999999999998,
+      "mean_observed_visit_s": 29.279999999999998,
+      "censored_visits": 1,
+      "peak_observed_occupancy": 1
+    }
+  ],
+  "timestamp_mode": "container_pts",
+  "stop_reason": "end_of_file",
+  "model_sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+  "provider": "CPUExecutionProvider",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "python": "3.12.12",
+  "video_codec": "h264",
+  "scene_note": "Demo ilustrativa de barra: Ron Lach / Pexels 8430969. Encuadre cercano, cuerpos ocultos y clip de 36 s; no representa un dia de operacion. Usamos centro de caja, no posicion de pies. Las zonas son regiones de imagen, no roles: no distingue empleados de clientes. Sin acceso visible, no se configuran entradas/salidas. Permanencia no equivale a espera ni atencion.",
+  "webcam_playback_note": null,
+  "max_observation_gap_s": 0.5,
+  "config": {
+    "anchor": "center",
+    "min_person_height": 0.2,
+    "scene_note": "Demo ilustrativa de barra: Ron Lach / Pexels 8430969. Encuadre cercano, cuerpos ocultos y clip de 36 s; no representa un dia de operacion. Usamos centro de caja, no posicion de pies. Las zonas son regiones de imagen, no roles: no distingue empleados de clientes. Sin acceso visible, no se configuran entradas/salidas. Permanencia no equivale a espera ni atencion.",
+    "zones": [
+      {
+        "name": "lado_interior_barra",
+        "polygon": [
+          [
+            0.08,
+            0.12
+          ],
+          [
+            0.5,
+            0.12
+          ],
+          [
+            0.5,
+            0.98
+          ],
+          [
+            0.08,
+            0.98
+          ]
+        ]
+      },
+      {
+        "name": "frente_barra",
+        "polygon": [
+          [
+            0.55,
+            0.12
+          ],
+          [
+            0.98,
+            0.12
+          ],
+          [
+            0.98,
+            0.98
+          ],
+          [
+            0.55,
+            0.98
+          ]
+        ]
+      }
+    ],
+    "gates": []
+  },
+  "size_filter": {
+    "min_person_height": 0.2,
+    "discarded_detection_samples": 1126
+  }
+}

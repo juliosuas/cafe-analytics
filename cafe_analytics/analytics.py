@@ -6,6 +6,9 @@ import numpy as np
 
 def validate_config(config):
     c = copy.deepcopy(config)
+    min_height = c.get("min_person_height", 0)
+    if isinstance(min_height, bool) or not isinstance(min_height, (int, float)) or not math.isfinite(min_height) or not 0 <= min_height < 1:
+        raise ValueError("min_person_height debe ser una fraccion finita entre 0 (desactivado) y 1 excluido")
     if c.get("anchor", "bottom_center") not in ("bottom_center", "center"):
         raise ValueError("anchor debe ser bottom_center o center")
     if not isinstance(c.get("zones"), list) or not c["zones"]:

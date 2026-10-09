@@ -30,3 +30,16 @@ No se entrenó ni ajustó ningún modelo con este video. Las imágenes y el vide
 - Salida: 1 × 8400 × 85, decodificación de grids/strides; confianza persona = objectness × probabilidad de clase 0. NMS 0.45.
 
 Se conserva la licencia y atribución del proyecto oficial que distribuye los pesos. No se encontró una licencia separada del archivo ONNX en la guía del release; la clasificación permisiva se basa en la licencia del proyecto distribuidor, no en una garantía sobre cada imagen de entrenamiento COCO. No se redistribuye el dataset COCO.
+
+## Demo de cafetería de barra · añadida en 0.1.1
+
+- **Autor:** Ron Lach. **Título de fuente:** Man Ordering at a Café.
+- Página: https://www.pexels.com/video/man-ordering-at-a-cafe-8430969/
+- Licencia: https://www.pexels.com/license/ (consultada el 8 de octubre de 2026, hora de Ciudad de México).
+- Archivo: https://videos.pexels.com/video-files/8430969/8430969-uhd_4096_2160_25fps.mp4
+- Original: 4096×2160, 25 FPS, 36 segundos, 900 fotogramas.
+- SHA256: `37c732b261d16cf8fe23b6a2f4745b0c321b18c5b7680657ed2e47ab0e28cebd`.
+- Descarga reproducible: `python scripts/download_assets.py --demo cafe`. El original se guarda en `assets/cafe-counter.mp4`, excluido de Git.
+- Derivados de análisis publicados en `docs/cafe/`: video con anotaciones y sin audio, preview, mapas, reportes y datos. No se relicencia el material audiovisual como Apache-2.0. Las personas y marcas del clip no respaldan este proyecto.
+- Es material de stock para una demostración técnica: encuadre cercano, oclusiones y cuerpos recortados. No es CCTV, un caso de éxito ni evidencia de la operación diaria de esa cafetería. No se evalúa a las personas retratadas ni se presentan fallas de su servicio.
+- Configuración: `configs/cafe-counter.json`, ancla en centro de caja por pies ocultos. Zonas de imagen a ambos lados de la barra, sin líneas de entrada/salida ni clasificación empleado/cliente. El centro no reconstruye una posición física sobre el piso.

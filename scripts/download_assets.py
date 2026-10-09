@@ -9,6 +9,7 @@ ASSETS = [
     ("models/yolox_s.onnx", "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.onnx", "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063"),
     ("assets/retail.mp4", "https://videos.pexels.com/video-files/10901926/10901926-hd_1920_1080_30fps.mp4", "93e3f7aa893d781e61de49855d736662ab32b54d026f008a55b285b06cdbfd0b"),
 ]
+CAFE_ASSET = ("assets/cafe-counter.mp4", "https://videos.pexels.com/video-files/8430969/8430969-uhd_4096_2160_25fps.mp4", "37c732b261d16cf8fe23b6a2f4745b0c321b18c5b7680657ed2e47ab0e28cebd")
 
 
 def sha256(path):
@@ -22,8 +23,10 @@ def sha256(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model-only", action="store_true")
+    parser.add_argument("--demo", choices=["retail", "cafe"], default="retail", help="Video publico que descargar junto al modelo")
     args = parser.parse_args()
-    for relative, url, expected in ASSETS[:1] if args.model_only else ASSETS:
+    assets = ASSETS[:1] if args.model_only else [ASSETS[0], CAFE_ASSET if args.demo == "cafe" else ASSETS[1]]
+    for relative, url, expected in assets:
         path = ROOT / relative
         if path.exists():
             if sha256(path) != expected:

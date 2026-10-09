@@ -64,3 +64,31 @@ Ambos entornos instalaron desde `pyproject.toml`, descargaron los assets oficial
 La nueva ejecución local se detuvo por esperas de lectura de archivos en el entorno existente; no se contó como una prueba aprobada. La evidencia de esta publicación proviene de los runners completos de GitHub y de la ejecución local histórica documentada arriba.
 
 GitHub Pages publicó la demo por HTTPS. Se revisaron los destinos locales antes de publicar. No se efectuó una auditoría de seguridad ni validación comercial de exactitud.
+
+## Demo de barra y mejoras 0.1.1 — 8 de octubre de 2026
+
+Entorno local nuevo: macOS 15.7.4 arm64, Python 3.12.12 de Homebrew, ONNX Runtime CPU, 4 hilos. Instalación editable limpia en entorno aislado. Se ejecutó el clip completo de Ron Lach / Pexels 8430969, sin detecciones simuladas, primero sin filtro y después con `configs/cafe-counter.json`.
+
+| Medición del mismo clip | Sin filtro de tamaño | Con mínimo de altura 0.20 |
+|---|---:|---:|
+| Frames procesados y decodificados | 900 / 900 | 900 / 900 |
+| IDs confirmados | 6 | 2 |
+| Pico en frente de barra | 3 | 1 |
+| Muestras de trayectoria | 2,518 | 1,631 |
+| Persona-segundos totales | 103.04 | 65.16 |
+
+La revisión del fotograma 90 (3.6 s) encontró una figura impresa del fondo detectada como persona. Una prueba de inferencia real verifica que el filtro conserva las dos personas físicas de ese fotograma. **Es una calibración sobre el mismo clip, no una validación independiente de precisión.** El filtro puede excluir personas reales pequeñas en otras vistas. Los 1,126 registros de detección descartados son muestras por fotograma, no personas ni falsos positivos confirmados individualmente.
+
+| Antes: figura del fondo contada | Después: filtro explícito de cámara |
+|---|---|
+| ![Error de detección en figura impresa](docs/cafe/before-filter.jpg) | ![Mismo instante con filtro de altura](docs/cafe/preview.jpg) |
+
+Resultado final: H.264 960×506, 25 FPS, 36 s; bucle de inferencia 216.20 s (4.16 FPS). Es una referencia de ejecución local, no garantía de tiempo real. No hay líneas de acceso: el resumen para el dueño marca entradas/salidas como no disponibles. Ambas visitas están marcadas parciales. Frente de barra: 29.28 persona-segundos; lado interior: 35.88. No son tiempos de espera o atención.
+
+**25 tests aprobados** con `python -m pytest -q -W error`: incluye detector real, cámara simulada, regresión del cartel, configuración del filtro, ocupación por frame, evidencia de picos, ausencia de acceso, escape HTML y diferencia entre tiempo de captura/reproducción. El verificador completo aprobó los 900 frames del MP4, CSV/JSON, 1,800 filas de ocupación (dos zonas), primeros picos y conservación de 65.16 persona-segundos en heatmap y pistas.
+
+Evidencia publicada: [verificación](docs/cafe/verification.json), [comparación](docs/cafe/calibration-comparison.json), [resumen técnico](docs/cafe/summary.json) y [resumen para el dueño](docs/cafe/owner-summary.json). Fuente, descarga y SHA256 del original en [SOURCES.md](SOURCES.md). Las afirmaciones de CI de la sección anterior corresponden a 0.1.0; el resultado de la nueva ejecución se documentará por separado.
+
+### Interfaz de 0.1.1
+
+Navegador integrado: seis opciones de giro cambian pregunta/señal/acción/dato faltante con una sola selección activa. Portada y resumen revisados a 390 px sin desbordamiento horizontal. Reproductor del resumen: duración 36 s, `readyState=4`, reproducción comprobada más allá de 12 s y sin error de medio. Preview, heatmap y trayectorias cargaron correctamente. El verificador de documentación comprobó 21 archivos y 90 destinos locales.

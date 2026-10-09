@@ -7,6 +7,11 @@ import numpy as np
 import onnxruntime as ort
 
 
+def filter_by_height(detections, frame_height, minimum=0):
+    """Optional scene calibration. May also remove real distant/cropped people."""
+    return detections[(detections[:, 3] - detections[:, 1]) >= frame_height * minimum]
+
+
 class Detector:
     def __init__(self, path, threshold=0.12, threads=4):
         options = ort.SessionOptions()

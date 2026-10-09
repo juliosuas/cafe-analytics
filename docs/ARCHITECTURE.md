@@ -45,3 +45,9 @@ Matriz 90×160. Cada intervalo continuo suma persona-segundos en el ancla observ
 ## Límites operativos actuales
 
 El MP4 se escribe a FPS nominales aunque webcam o video VFR tenga otra cadencia efectiva. La analítica conserva sus timestamps, pero reproducción y tiempo real pueden divergir. No hay recuperación después de reinicios, RTSP supervisado, tolerancia a cambios de encuadre, colas de tareas o modo multitienda. Un corte de lectura no se diagnostica todavía como fallo de cámara frente a fin de fuente. Antes de operación desatendida, implementar salud de captura y sesiones durables.
+
+## Resumen orientado al dueño (0.1.1)
+
+`owner.SessionEvidence` conserva contadores por zona y el primer fotograma de cada máximo, con memoria constante por zona. La CLI escribe `occupancy.csv` incrementalmente para cada fotograma, incluyendo ocupación cero. `owner.build_brief` verifica correspondencia de frames y picos, conserva las métricas observadas y añade preguntas de revisión mediante reglas fijas. No utiliza un LLM ni decide causas, ventas o dotación de personal.
+
+`owner.html` y `owner-summary.json` son adicionales al reporte técnico. Los enlaces de video se calculan por índice de fotograma / FPS de salida, para no confundir tiempo de captura de webcam con tiempo de reproducción. No se calcula cobertura de una jornada sin timestamps absolutos y salud de cámara. [Contrato de datos](DATA_MODEL.md).

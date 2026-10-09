@@ -21,7 +21,7 @@ class Links(HTMLParser):
 def check():
     failures = []
     checked = 0
-    files = list(ROOT.glob('*.md')) + list((ROOT / 'docs').rglob('*.md')) + list((ROOT / 'docs').glob('*.html'))
+    files = list(ROOT.glob('*.md')) + list((ROOT / 'docs').rglob('*.md')) + list((ROOT / 'docs').rglob('*.html'))
     for path in files:
         source = path.read_text(encoding='utf-8')
         if path.suffix == '.html':
@@ -38,10 +38,10 @@ def check():
             if not location.is_relative_to(ROOT) or not location.exists():
                 failures.append(f'{path.relative_to(ROOT)}: {target}')
             checked += 1
-    # Only the explicitly attributed public clip may enter the published demo.
-    for page in ['index.html', 'report.html']:
+    for page, asset_id in [('index.html', '8430969'), ('report.html', '10901926'),
+                           ('cafe/report.html', '8430969'), ('cafe/owner.html', '8430969')]:
         source = (ROOT / 'docs' / page).read_text(encoding='utf-8')
-        if '10901926' not in source or 'pexels.com/license/' not in source:
+        if asset_id not in source or 'pexels.com/license/' not in source:
             failures.append(f'{page}: missing video attribution/license')
     if failures:
         raise SystemExit('Documentation errors:\n' + '\n'.join(failures))

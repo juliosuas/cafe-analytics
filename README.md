@@ -15,7 +15,7 @@ Analytics local de personas para cafeterías y tiendas. Convierte video en evide
 
 </div>
 
-[![Demo real: detección de personas y trayectorias](docs/media/demo.gif)](https://juliosuas.github.io/cafe-analytics/#demo)
+[![Demo real: cafetería de barra](docs/cafe/preview.jpg)](https://juliosuas.github.io/cafe-analytics/#demo)
 
 > **Estado actual:** MVP que analiza archivos locales y ofrece captura opcional de webcam. El monitoreo desatendido, las alertas y los reportes diarios automáticos son la siguiente etapa; todavía no están implementados. Las personas del video no respaldan este proyecto.
 
@@ -41,25 +41,31 @@ El MVP construye la base medible de ese producto. Separa tres cosas: lo que la c
 - **Zonas dibujadas sobre tu video:** editor HTML local, polígonos y líneas de acceso.
 - **Permanencia y flujo:** tiempo observado, visitas parciales, ocupación máxima y cruces bidireccionales.
 - **Evidencia visual:** video anotado, trayectorias y heatmap en persona-segundos.
-- **Datos portables:** CSV y JSON, más reporte HTML que funciona sin servidor.
+- **Lectura para el dueño:** resumen de sesión y ocupación por fotograma, con instantes de evidencia.
+- **Datos portables:** CSV y JSON, más reportes HTML que funcionan sin servidor.
 - **Procesamiento local:** sin cuenta, clave de API ni servicios de inferencia después de instalar y descargar los assets.
 - **Sin biometría:** no hay reconocimiento facial ni inferencias de edad, género o emoción.
 
-## Demo y resultados reales
+## Demo de cafetería de barra
 
-[Ver video MP4](docs/media/demo.mp4) · [Abrir reporte completo](https://juliosuas.github.io/cafe-analytics/report.html) · [Ver resumen JSON](docs/demo/summary.json)
+[Ver demo pública](https://juliosuas.github.io/cafe-analytics/#demo) · [Resumen para el dueño](https://juliosuas.github.io/cafe-analytics/cafe/owner.html) · [Reporte técnico](https://juliosuas.github.io/cafe-analytics/cafe/report.html)
 
-| Detecciones e IDs | Heatmap | Trayectorias |
-|:---:|:---:|:---:|
-| ![Personas detectadas en supermercado](docs/media/detection.jpg) | ![Presencia acumulada por zona](docs/media/heatmap.jpg) | ![Trayectorias observadas por ID](docs/media/trajectories.jpg) |
+![Detecciones y zonas de barra](docs/cafe/preview.jpg)
 
-**Ejecución documentada del 3 de octubre de 2026:** macOS 15.7.4 arm64, Python 3.12.14, CPU con 4 hilos. Procesó 341/341 fotogramas (11.37 s de video) a 9.41 FPS de procesamiento. Generó 5,002 muestras de trayectoria. No es una medición de precisión ni una promesa de tiempo real.
+**36 segundos, 900 fotogramas y dos zonas de imagen.** Video de [Ron Lach / Pexels 8430969](https://www.pexels.com/video/man-ordering-at-a-cafe-8430969/), con [licencia separada](SOURCES.md). El encuadre oculta pies; se usa centro de caja y no se estiman posiciones físicas en el piso. No hay acceso visible: entradas y salidas están **no disponibles**, no en cero. La detección no distingue empleados de clientes.
 
-Los **30 IDs confirmados no equivalen a 30 clientes únicos**. La línea de la demo es virtual, no una puerta; su cruce no representa una entrada real al comercio. El clip es demasiado corto para recomendar dotación de personal o cambios de negocio. [Evidencia y límites](VERIFICATION.md).
+Cada ejecución produce ahora `occupancy.csv`, `owner-summary.json` y `owner.html`: ocupación por fotograma, primeros máximos con enlace al video, hechos observados y preguntas de revisión. La media de permanencia conserva episodios parciales; no se transforma en espera ni en recomendación de personal.
 
-Video: [Suika Chan / Pexels 10901926](https://www.pexels.com/video/customers-shopping-at-supermarket-10901926/). [Fuente, licencia y hashes](SOURCES.md).
+La primera [demo de supermercado](https://juliosuas.github.io/cafe-analytics/report.html) sigue disponible: Suika Chan / Pexels 10901926, 341 fotogramas. [Ejecuciones, resultados y límites](VERIFICATION.md).
 
-## Empieza en cinco minutos
+## Dos superficies, una dirección
+
+- **[Web pública](https://juliosuas.github.io/cafe-analytics/):** utilidad para el dueño, video real, resumen de sesión y seis casos de negocio explorables.
+- **GitHub:** motor, configuración, pruebas y backlog técnico. Los casos de panadería, comida para llevar, tienda, barbería/salón y lavandería son hipótesis por validar, no clientes ni beneficios demostrados.
+
+[Dirección de producto y prioridades técnicas](docs/PRODUCT_STRATEGY.md).
+
+## Ejecuta la demo local
 
 Recomendado: Python 3.12, FFmpeg y cámara fija o video propio. La primera instalación necesita internet. Los modelos y el video original se descargan por separado y se verifican con SHA256.
 
@@ -69,11 +75,11 @@ cd cafe-analytics
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[test]'
-python scripts/download_assets.py
-cafe-analytics run --source assets/retail.mp4 --config configs/demo.json --output runs/mi-demo
+python scripts/download_assets.py --demo cafe
+cafe-analytics run --source assets/cafe-counter.mp4 --config configs/cafe-counter.json --output runs/mi-demo
 ```
 
-Abre `runs/mi-demo/report.html` en tu navegador. El código rechaza carpetas de salida que ya contienen datos.
+Abre `runs/mi-demo/owner.html` para el dueño o `runs/mi-demo/report.html` para las métricas técnicas. El código rechaza carpetas de salida que ya contienen datos.
 
 **macOS Apple Silicon:** `brew install python@3.12 ffmpeg`. **Ubuntu 22.04/24.04:** instala `python3 python3-venv python3-pip ffmpeg libgl1 libglib2.0-0`; usa `python3` en lugar de `python3.12` cuando corresponda. [Instalación completa y solución de problemas](docs/USAGE.es.md).
 
@@ -112,9 +118,12 @@ flowchart LR
 
 ## Verificación
 
+**0.1.1, ejecución local del 8 de octubre:** 25 tests aprobados y 900/900 frames de cafetería procesados y verificados. El filtro calibrado redujo de 6 a 2 IDs en ese clip; no es un benchmark independiente. [Antes/después y evidencia](VERIFICATION.md#demo-de-barra-y-mejoras-011--8-de-octubre-de-2026).
+
 **CI del 8 de octubre de 2026:** 12 pruebas aprobadas y 341/341 frames procesados tanto en Ubuntu 24.04 como en macOS 14 arm64, con Python 3.12. [Ver ejecución](https://github.com/juliosuas/cafe-analytics/actions/runs/37886562901). La webcam física sigue pendiente.
 
 ```bash
+python scripts/download_assets.py  # añade retail para las pruebas de inferencia
 python -m pytest -q -W error
 python scripts/verify_run.py runs/mi-demo
 ```

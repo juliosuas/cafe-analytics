@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.1 — 2026-10-08
+
+- Demo reproducible de cafetería de barra: Ron Lach / Pexels 8430969, 36 s, 900 fotogramas, zonas de imagen y accesos no disponibles.
+- Filtro opcional `min_person_height` calibrado para excluir figuras pequeñas del fondo en la demo; desactivado por defecto y registrado en el resumen.
+- Ocupación por zona por fotograma en `occupancy.csv`, incluyendo ceros.
+- Resumen determinista `owner-summary.json` / `owner.html`, hechos, límites y enlaces al primer pico observado. Webcam enlaza según fotograma de reproducción.
+- Página pública orientada al dueño, con selector de seis giros e hipótesis explícitas; GitHub concentra instalación, arquitectura, evidencia y backlog.
+- Tests de evidencia, ausencia de datos, escape HTML y tiempos de reproducción; verificador ampliado para los nuevos archivos.
+- Continúan pendientes la validación comercial, espera real, roles, monitoreo desatendido y reportes diarios remotos.
+
 ## 0.1.0 — 2026-10-08
 
 Primera publicación pública del MVP local construido y probado inicialmente el 3 de octubre de 2026.

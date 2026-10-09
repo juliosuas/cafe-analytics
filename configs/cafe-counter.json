@@ -1,0 +1,10 @@
+{
+  "anchor": "center",
+  "min_person_height": 0.20,
+  "scene_note": "Demo ilustrativa de barra: Ron Lach / Pexels 8430969. Encuadre cercano, cuerpos ocultos y clip de 36 s; no representa un dia de operacion. Usamos centro de caja, no posicion de pies. Las zonas son regiones de imagen, no roles: no distingue empleados de clientes. Sin acceso visible, no se configuran entradas/salidas. Permanencia no equivale a espera ni atencion.",
+  "zones": [
+    {"name": "lado_interior_barra", "polygon": [[0.08,0.12],[0.50,0.12],[0.50,0.98],[0.08,0.98]]},
+    {"name": "frente_barra", "polygon": [[0.55,0.12],[0.98,0.12],[0.98,0.98],[0.55,0.98]]}
+  ],
+  "gates": []
+}

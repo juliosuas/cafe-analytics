@@ -4,7 +4,7 @@
 
 Un dueño debe poder revisar en pocos minutos qué ocurrió durante el día, qué merece atención y qué puede hacer después. El producto final no será una colección de cajas sobre un video: será un resumen de operación, con evidencia verificable y límites claros.
 
-**Hoy:** análisis local por ejecución, con CSV/JSON, video y reporte. **Pendiente:** lectura continua de cámaras, entrega remota, comparación automática por horarios y alertas. El dueño puede consultar el reporte terminado que alguien le comparta; todavía no hay un servicio que lo genere y envíe solo.
+**Hoy:** análisis local por ejecución, con CSV/JSON, video, reporte técnico y un resumen para el dueño (`owner.html`) que enlaza máximos de ocupación con su evidencia. **Pendiente:** lectura continua de cámaras, entrega remota, comparación automática por horarios y alertas. El dueño puede consultar el reporte terminado que alguien le comparta; todavía no hay un servicio que lo genere y envíe solo.
 
 ## De observación a acción
 
@@ -16,7 +16,7 @@ Un dueño debe poder revisar en pocos minutos qué ocurrió durante el día, qu�
 | Variación de afluencia | Cruces de una línea en el acceso real | Validar dirección, errores y cobertura de todos los accesos | Adaptar preparación/turnos solo tras varios días representativos |
 | Caída repentina de actividad | Menos observaciones | Confirmar cámara activa y horario de operación | Investigar primero calidad de datos; no concluir que faltan clientes |
 
-Estas son hipótesis de uso, **no recomendaciones deducidas de la demo**. El clip público dura 11.37 segundos y no permite evaluar una operación comercial.
+Estas son hipótesis de uso, **no recomendaciones deducidas de la demo**. La demo de barra dura 36 segundos; la de supermercado, 11.37. Ninguna permite evaluar una operación comercial.
 
 ## Cómo debería ser el resumen diario (diseño, aún no implementado)
 
@@ -43,3 +43,7 @@ El informe debe decir “datos insuficientes” cuando falte cobertura. Un cero 
 Definir una sola pregunta operacional. Ejemplo: “¿En qué franjas debemos revisar acumulación junto a la barra?”. Seleccionar cámara fija, definir la zona con el encargado y usar varios períodos representativos. Etiquetar manualmente una muestra. Si se quiere medir espera, marcar entrada a la fila e inicio real de atención, no usar dwell como sustituto automático.
 
 Revisar primero tasa de cobertura, errores de conteo y pérdida de IDs. Acordar con el dueño el error tolerable antes de usar los resultados para decidir. Guardar cambios operativos en una bitácora y comparar días equivalentes. [Protocolo de validación](VALIDATION.md).
+
+## Explorar otros negocios
+
+La [web pública](https://juliosuas.github.io/cafe-analytics/#negocios) traduce el método a seis giros con preguntas y datos faltantes. [Estrategia y backlog](PRODUCT_STRATEGY.md) explica cómo validar cada caso sin reutilizar ciegamente las zonas o conclusiones de una cafetería.
