@@ -1,6 +1,7 @@
 {
   "type": "fictional_product_demonstration",
-  "all_metrics_simulated": true,
+  "business_metrics_simulated": true,
+  "tracking_boxes": "model_detections",
   "duration_seconds": 27,
   "scenes": [
     {

@@ -118,3 +118,9 @@ Se añadió `docs/candidatos.html`, separado de la portada, con tres reproductor
 Solicitud posterior del usuario: usar un video corto y datos inventados, con varios negocios. Se generó un solo MP4 con tres segmentos de 9 segundos: cafetería, restaurante/bar y tienda. No es una salida del detector. Su manifiesto `docs/showcase/scenario.json` declara `all_metrics_simulated: true`.
 
 FFprobe: H.264 1280×720, 30 FPS, duración 27.000000 s, 810 fotogramas. Todos los fotogramas llevan el rótulo de simulación; las tarjetas aparecen escalonadas al inicio de cada escena. Las métricas quedan incrustadas, visibles también en pantalla completa. Se revisan los tres segmentos y el video completo mediante decodificación. Verificación documental: 24 archivos, 111 destinos locales.
+
+## Cuadros de personas e información arriba · 9 de octubre de 2026
+
+Se ejecutó YOLOX-S y el tracker del proyecto sobre las tres escenas normalizadas, con inferencia a 10 FPS y salida a 30 FPS; en los dos cuadros intermedios se conserva la última caja. Cada escena contiene 270 fotogramas y tiene cajas confirmadas en 264 (los primeros seis corresponden a la confirmación inicial). Se verificaron coordenadas dentro del encuadre y prefijos de ID separados C/R/T. Las cajas y trazas provienen del detector; las tarjetas de negocio siguen siendo ficticias. La cámara móvil, oclusiones y time-lapse pueden producir errores y cambios de ID: no se presenta como una evaluación de precisión.
+
+El nuevo MP4 tiene 810 fotogramas, 27.000000 s, H.264 1280×960. La franja superior de 240 px contiene la información; la escena conserva sus 1280×720 completos debajo. Decodificación completa con FFmpeg sin errores y revisión visual de cuadros/etiquetas. Resumen reproducible en `docs/showcase/tracking-verification.json`, sin convertir estas observaciones en métricas de negocio.

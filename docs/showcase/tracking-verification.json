@@ -1,0 +1,36 @@
+{
+  "type": "actual_person_detector_tracking",
+  "inference_fps": 10,
+  "video_fps": 30,
+  "intermediate_frames": "hold last detected boxes for at most 2 frames",
+  "model_sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+  "ids_are_temporary": true,
+  "business_cards_are_not_inferred": true,
+  "scenes": [
+    {
+      "scene": 0,
+      "business": "CAFETERÍA",
+      "source_sha256": "226924eb46bcafbd3d3dd6f1ad0aed6b35d45e58730fd692dd12c915e5eeae5a",
+      "frames": 270,
+      "frames_with_boxes": 264,
+      "max_simultaneous_boxes": 16
+    },
+    {
+      "scene": 1,
+      "business": "RESTAURANTE / BAR",
+      "source_sha256": "c2f9850f00c8d01e8c938f9452cbeebe7252d65a1088e85c349548d6eb517565",
+      "frames": 270,
+      "frames_with_boxes": 264,
+      "max_simultaneous_boxes": 16
+    },
+    {
+      "scene": 2,
+      "business": "TIENDA",
+      "source_sha256": "93e3f7aa893d781e61de49855d736662ab32b54d026f008a55b285b06cdbfd0b",
+      "frames": 270,
+      "frames_with_boxes": 264,
+      "max_simultaneous_boxes": 16
+    }
+  ],
+  "checks_passed": true
+}

@@ -76,3 +76,6 @@ El objetivo operativo se amplía a **personas → preparación de bebida → pue
 ## Presentación actual · 9 de octubre de 2026
 
 La marca pública es Pulso Local. La portada usa un montaje de 27 segundos de cafetería, restaurante/bar y tienda con métricas ficticias rotuladas. Es una demostración del concepto autorizada por el usuario, separada de la validación del motor. Los pedidos, consumos, roles y conteos de preparación de ese montaje están escritos en `docs/showcase/scenario.json`; no son capacidades implementadas ni resultados del modelo. Las demos anteriores se conservan como evidencia técnica.
+
+
+Actualización visual: cuadros de detección e IDs temporales generados con el motor sobre cada escena; las tarjetas simuladas se muestran en una franja separada arriba del video. La detección de una persona no vincula esa persona con las tarjetas ficticias ni implica reconocimiento facial.

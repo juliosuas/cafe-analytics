@@ -50,9 +50,9 @@ El MVP construye la base medible de ese producto. Separa tres cosas: lo que la c
 
 La [portada](https://juliosuas.github.io/cafe-analytics/) presenta un solo video de **27 segundos**: cafetería, restaurante/bar y tienda. Usa grabaciones reales con tarjetas de **datos ficticios** para mostrar la dirección del producto (permanencia, pedidos, bebidas, visitas y compras). El rótulo «DEMO ILUSTRATIVA · DATOS SIMULADOS» permanece incrustado durante todo el video, incluso en pantalla completa.
 
-**No es una salida del modelo.** El motor actual continúa analizando personas y zonas; no se atribuyen pedidos ni bebidas a las personas de los clips. Las ejecuciones verificadas se conservan en [flow](https://juliosuas.github.io/cafe-analytics/flow/report.html), [barra](https://juliosuas.github.io/cafe-analytics/cafe/report.html) y [retail](https://juliosuas.github.io/cafe-analytics/report.html).
+Las **tarjetas de negocio son ficticias**. Los cuadros e IDs temporales sí proceden del detector de personas; se reinician en cada escena y no identifican rostros ni asignan roles. No se atribuyen pedidos ni bebidas reales a las personas de los clips. Las ejecuciones verificadas se conservan en [flow](https://juliosuas.github.io/cafe-analytics/flow/report.html), [barra](https://juliosuas.github.io/cafe-analytics/cafe/report.html) y [retail](https://juliosuas.github.io/cafe-analytics/report.html).
 
-Guion de la demo en [scenario.json](docs/showcase/scenario.json); render reproducible con `python scripts/render_marketing_demo.py` y FFmpeg con drawtext. Rutas de entrada y descargas en [SOURCES.md](SOURCES.md). En Ubuntu pasa `--font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf --bold-font /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf`; macOS usa Arial del sistema. No añade dependencias al motor.
+Guion de la demo en [scenario.json](docs/showcase/scenario.json); render reproducible con `python scripts/render_showcase_tracking.py` seguido de `python scripts/render_marketing_demo.py --tracking-dir runs/showcase-tracking`, y FFmpeg con drawtext. Rutas de entrada y descargas en [SOURCES.md](SOURCES.md). En Ubuntu pasa `--font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf --bold-font /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf`; macOS usa Arial del sistema. No añade dependencias al motor.
 
 ## Demo de cafetería de barra
 

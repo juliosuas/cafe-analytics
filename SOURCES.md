@@ -85,3 +85,8 @@ Por solicitud del usuario, la portada usa un único montaje de 27 segundos con d
 - 18–27 s: tienda, Suika Chan / Pexels 10901926 (fuente, licencia y SHA256 indicados al inicio). Input `assets/retail.mp4`.
 - Derivados: `docs/showcase/demo.mp4` (H.264 1280×720, 30 FPS, sin audio), `poster.jpg` y `scenario.json`. El JSON contiene solo el guion de cifras ficticias.
 - Renderer: `scripts/render_marketing_demo.py`, utiliza FFmpeg con drawtext y tipografías del sistema. Para reproducir, guarda los tres archivos en las rutas de input anteriores desde sus URLs documentadas; no hay llamadas de inferencia. Los originales no se versionan; los derechos audiovisuales siguen bajo las licencias de las fuentes, no Apache-2.0.
+
+
+### Cuadros e IDs en el montaje
+
+La revisión visual del montaje usa `scripts/render_showcase_tracking.py` para normalizar 9 s por escena a 30 FPS y ejecutar YOLOX-S con el tracker del proyecto. Los IDs llevan prefijos C/R/T y se reinician por escena. Se publican cajas y trazas visuales sin reconocimiento facial. Los roles y cifras de las tarjetas siguen siendo ficticios y no están vinculados al ID de ninguna persona. `scripts/render_marketing_demo.py --tracking-dir runs/showcase-tracking` coloca las tarjetas en una banda superior separada; salida 1280×960. Los resultados intermedios quedan en `runs/showcase-tracking`, excluidos de Git.
