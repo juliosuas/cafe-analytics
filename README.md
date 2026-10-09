@@ -1,10 +1,10 @@
 <div align="center">
 
-# Café Analytics
+# Pulso Local
 
 ### Entiende qué pasa en tu negocio, aunque no estés ahí.
 
-Analytics local de personas para cafeterías y tiendas. Convierte video en evidencia de ocupación, permanencia y flujo para apoyar decisiones de operación.
+Antes Café Analytics. Analytics local de personas para cafeterías, tiendas y otros pequeños negocios. Convierte video en evidencia de ocupación, permanencia y flujo para apoyar decisiones de operación.
 
 [**Ver demo con video →**](https://juliosuas.github.io/cafe-analytics/) · [Guía de instalación](docs/USAGE.es.md) · [Para dueños de negocio](docs/OWNER_GUIDE.md) · [Roadmap](docs/ROADMAP.md)
 

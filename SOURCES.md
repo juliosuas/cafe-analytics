@@ -65,3 +65,13 @@ Se conserva la licencia y atribución del proyecto oficial que distribuye los pe
 - Original en `assets/cafe-flow.mp4`, excluido de Git. Descargador: `--demo cafe-flow`; configuración: `configs/cafe-flow.json`. Derivados del análisis en `docs/flow/`; H.264 sin audio.
 - Es una toma real con varias personas, utilizada como ilustración del seguimiento. **La cámara se mueve**: única zona = encuadre completo; sin puertas ni roles. Trayectorias y heatmap contienen movimiento de cámara. No se usan como evidencia de espera, circulación física o desempeño de ese establecimiento.
 - La portada contiene un solo reproductor local de esta demo. Los ejemplos de barra y supermercado siguen disponibles como archivos técnicos independientes.
+
+## Candidatos pendientes de elección · 9 de octubre de 2026
+
+La página `docs/candidatos.html` reproduce desde los proveedores originales estos candidatos; no son nuevas salidas del modelo ni sustituyen aún al video principal:
+
+1. [A busy elegant bar — Mixkit 4043](https://mixkit.co/free-stock-video/a-busy-elegant-bar-4043/). La ficha declara Mixkit Stock Video Free License para uso personal/comercial. Video acelerado; la escala de tiempo real no está documentada. Fuente del reproductor: https://assets.mixkit.co/videos/4043/4043-720.mp4
+2. [People Inside the Coffee Shop — Nazim Zafri / Pexels 3135925](https://www.pexels.com/video/people-inside-the-coffee-shop-3135925/). Licencia Pexels. Fuente del reproductor: https://videos.pexels.com/video-files/3135925/3135925-hd_1920_1080_30fps.mp4
+3. [People are eating at tables in a food court — Nazim Zafri / Pexels 18533896](https://www.pexels.com/video/people-are-eating-at-tables-in-a-food-court-18533896/). Licencia Pexels. Fuente del reproductor: https://videos.pexels.com/video-files/18533896/18533896-hd_1920_1080_30fps.mp4
+
+Fuentes y fichas consultadas el 9 de octubre de 2026. Las personas, negocios y marcas no respaldan el proyecto. Clips breves para elegir una escena visual; no acreditan pedidos, productividad, permanencias de dos horas ni ritmos horarios. No se extrapolan las repeticiones del video. Los archivos externos pueden cambiar o dejar de estar disponibles; cada tarjeta enlaza a la fuente.

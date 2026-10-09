@@ -106,3 +106,9 @@ Fuente Pexels 35545660, SHA256 documentado en SOURCES.md. Ejecución completa lo
 Validación local: 25 tests pasan (8.13 s); verificador de documentación: 23 archivos, 111 destinos locales. Navegador: exactamente un video y cero iframes, H.264 reproducido, duración 10.276944 s, readyState 4, muted=true y reproducción en progreso. Se comprueban pausa/reanudación y diseño móvil antes de publicar.
 
 La ejecución CI anterior del mismo motor, [37889503348](https://github.com/juliosuas/cafe-analytics/actions/runs/37889503348), completó en Ubuntu 24.04 y macOS 14 arm64: 25 tests por plataforma, ambos clips completos (retail 341 frames y barra 900 frames) y verificadores aprobados. Ese CI no incluye el nuevo clip de portada; este último fue ejecutado y verificado localmente.
+
+## Pulso Local y selección de video · 9 de octubre de 2026
+
+Nombre público actualizado a Pulso Local; retirados el bloque «La ingeniería vive en GitHub» y el enlace de navegación «Desarrolladores». El nombre técnico del paquete y las rutas del repositorio se conservan para compatibilidad. El video de portada permanece hasta que el usuario elija su sustituto.
+
+Se añadió `docs/candidatos.html`, separado de la portada, con tres reproductores de fuentes originales. Prueba en navegador: los tres cargaron con readyState 4 y reprodujeron; al iniciar otro, se pausa el anterior. Duraciones observadas: Mixkit 4043 = 14.833333 s, Pexels 3135925 = 10.043367 s, Pexels 18533896 = 12.628333 s. Se inspeccionaron los encuadres de barra con clientes/personal, cafetería con mesas y zona de comida. Ninguno valida observaciones de una o dos horas. Los ejemplos de métricas futuras están rotulados como ilustrativos y separados de los videos.
