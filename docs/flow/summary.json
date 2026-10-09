@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "run_id": "035be5bf-adbf-4590-8968-43093fcb3647",
+  "source": "Sururi Ballıdağ Director / Pexels 35545660",
+  "webcam": false,
+  "frames_processed": 308,
+  "video_seconds": 10.276933333333334,
+  "source_fps": 29.97002997002997,
+  "processing_seconds": 124.56784583302215,
+  "processing_fps": 2.4725481759784205,
+  "confirmed_track_ids": 14,
+  "gate_counts": {},
+  "zones": [
+    {
+      "zone": "encuadre",
+      "track_ids": 14,
+      "visits": 15,
+      "observed_person_seconds": 54.42103333333334,
+      "mean_observed_visit_s": 3.6280688888888895,
+      "censored_visits": 15,
+      "peak_observed_occupancy": 8
+    }
+  ],
+  "timestamp_mode": "container_pts",
+  "stop_reason": "end_of_file",
+  "model_sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+  "provider": "CPUExecutionProvider",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "python": "3.12.12",
+  "video_codec": "h264",
+  "scene_note": "Demo visual con varias personas: Sururi Ballıdağ Director / Pexels 35545660. Camara movil, 10.28 s: solo se mide presencia dentro del encuadre completo. Las trayectorias y el heatmap estan en coordenadas de imagen y contienen movimiento de camara; no describen recorridos fisicos. Sin roles automaticos, conteo de tazas, puertas ni tiempo de espera. Para decisiones por zona se requiere una camara fija y validacion manual.",
+  "webcam_playback_note": null,
+  "max_observation_gap_s": 0.5,
+  "config": {
+    "anchor": "center",
+    "min_person_height": 0,
+    "scene_note": "Demo visual con varias personas: Sururi Ballıdağ Director / Pexels 35545660. Camara movil, 10.28 s: solo se mide presencia dentro del encuadre completo. Las trayectorias y el heatmap estan en coordenadas de imagen y contienen movimiento de camara; no describen recorridos fisicos. Sin roles automaticos, conteo de tazas, puertas ni tiempo de espera. Para decisiones por zona se requiere una camara fija y validacion manual.",
+    "zones": [
+      {
+        "name": "encuadre",
+        "polygon": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "gates": []
+  },
+  "size_filter": {
+    "min_person_height": 0,
+    "discarded_detection_samples": 0
+  }
+}

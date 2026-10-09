@@ -1,0 +1,7 @@
+{
+  "anchor": "center",
+  "min_person_height": 0,
+  "scene_note": "Demo visual con varias personas: Sururi Ballıdağ Director / Pexels 35545660. Camara movil, 10.28 s: solo se mide presencia dentro del encuadre completo. Las trayectorias y el heatmap estan en coordenadas de imagen y contienen movimiento de camara; no describen recorridos fisicos. Sin roles automaticos, conteo de tazas, puertas ni tiempo de espera. Para decisiones por zona se requiere una camara fija y validacion manual.",
+  "zones": [{"name": "encuadre", "polygon": [[0,0],[1,0],[1,1],[0,1]]}],
+  "gates": []
+}

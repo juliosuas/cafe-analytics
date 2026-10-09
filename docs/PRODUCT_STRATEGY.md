@@ -60,7 +60,7 @@ Se añadió `min_person_height`, desactivado por defecto y fijado a `0.20` solo 
 
 ## Flujo de clientes y bebidas: la próxima capacidad solicitada
 
-La portada muestra una [sesión real de Artisti Coffee Roasters](https://www.youtube.com/watch?v=RKAva1OK8i4&t=874s) mediante su reproductor original. Es referencia de la operación que queremos entender, no salida de nuestros modelos. Su licencia no se asume permisiva y no forma parte del dataset descargable.
+La portada muestra una única demo procesada con varias personas ([Pexels 35545660](https://www.pexels.com/video/busy-cafe-with-customers-ordering-at-counter-35545660/)). Su toma móvil es una demostración visual de seguimiento; para medir zonas de operación se necesita otra grabación fija. La referencia previa de Artisti queda documentada históricamente en SOURCES.md y ya no está incrustada.
 
 El objetivo operativo se amplía a **personas → preparación de bebida → puesta en entrega → retirada**. Para implementarlo con evidencia:
 

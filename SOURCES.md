@@ -44,11 +44,24 @@ Se conserva la licencia y atribución del proyecto oficial que distribuye los pe
 - Es material de stock para una demostración técnica: encuadre cercano, oclusiones y cuerpos recortados. No es CCTV, un caso de éxito ni evidencia de la operación diaria de esa cafetería. No se evalúa a las personas retratadas ni se presentan fallas de su servicio.
 - Configuración: `configs/cafe-counter.json`, ancla en centro de caja por pies ocultos. Zonas de imagen a ambos lados de la barra, sin líneas de entrada/salida ni clasificación empleado/cliente. El centro no reconstruye una posición física sobre el piso.
 
-## Referencia de operación real (no procesada por el MVP)
+## Referencia histórica de operación (retirada de portada)
 
 - **Autor:** Artisti Coffee Roasters. **Video:** See how a professional barista makes coffee working solo, duración observada en el reproductor 29:09.
 - Reproductor original: https://www.youtube.com/watch?v=RKAva1OK8i4
 - Publicación del autor: https://artisti.com.au/blogs/training/working-solo-in-a-busy-espresso-bar-barista-work-flow-and-multi-tasking
 - El autor describe aproximadamente 30 minutos atendiendo pedidos y preparando café durante la mañana. Inspección visual: en 14:34 se ve llegada a la barra y vasos sobre el mostrador; en otros momentos se ve preparación en la máquina.
-- Se muestra mediante el reproductor de YouTube, empezando en 14:34. **No se descargó, modificó ni republicó el video. No se encontró una licencia permisiva para incorporarlo como dataset o asset del repositorio.** Es una referencia de observación, no nuestra demo analizada ni una relación comercial con el autor.
+- Anteriormente se enlazó mediante YouTube en 14:34; ya no se incorpora a la portada. **No se descargó, modificó ni republicó el video. No se encontró una licencia permisiva para incorporarlo como dataset o asset del repositorio.** Es una referencia de observación, no nuestra demo analizada ni una relación comercial con el autor.
 - Tiene cambios de encuadre; no es una grabación continua de una sola cámara para medir trayectorias o tiempos sin segmentación. No se publican conteos inferidos de tazas, clientes o pedidos sobre ese video.
+
+
+## Video protagonista: cafetería con varias personas
+
+- Autor: **Sururi Ballıdağ Director**. Título: **Busy Cafe with Customers Ordering at Counter**.
+- Fuente: https://www.pexels.com/video/busy-cafe-with-customers-ordering-at-counter-35545660/
+- Licencia Pexels: https://www.pexels.com/license/ (consultada el 8 de octubre de 2026). Permite modificación y uso web; no se implica respaldo de las personas o marcas. El audiovisual conserva esta licencia, separada del código Apache-2.0.
+- Archivo procesado: https://videos.pexels.com/video-files/35545660/15059172_2560_1440_30fps.mp4
+- Descarga: 2560×1440, 30000/1001 FPS, aproximadamente 10.28 s. La ficha de Pexels anuncia otras dimensiones originales; esta es la variante descargada.
+- SHA256: `c71710a841291aa530a9596735ef8989464bc1fb11bd6c965144b552fed6f3b9`.
+- Original en `assets/cafe-flow.mp4`, excluido de Git. Descargador: `--demo cafe-flow`; configuración: `configs/cafe-flow.json`. Derivados del análisis en `docs/flow/`; H.264 sin audio.
+- Es una toma real con varias personas, utilizada como ilustración del seguimiento. **La cámara se mueve**: única zona = encuadre completo; sin puertas ni roles. Trayectorias y heatmap contienen movimiento de cámara. No se usan como evidencia de espera, circulación física o desempeño de ese establecimiento.
+- La portada contiene un solo reproductor local de esta demo. Los ejemplos de barra y supermercado siguen disponibles como archivos técnicos independientes.

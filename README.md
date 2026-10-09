@@ -15,7 +15,7 @@ Analytics local de personas para cafeterías y tiendas. Convierte video en evide
 
 </div>
 
-[![Demo real: cafetería de barra](docs/cafe/preview.jpg)](https://juliosuas.github.io/cafe-analytics/#demo)
+[![Demo principal con varias personas](docs/flow/preview.jpg)](https://juliosuas.github.io/cafe-analytics/#operacion)
 
 > **Estado actual:** MVP que analiza archivos locales y ofrece captura opcional de webcam. El monitoreo desatendido, las alertas y los reportes diarios automáticos son la siguiente etapa; todavía no están implementados. Las personas del video no respaldan este proyecto.
 
@@ -46,9 +46,21 @@ El MVP construye la base medible de ese producto. Separa tres cosas: lo que la c
 - **Procesamiento local:** sin cuenta, clave de API ni servicios de inferencia después de instalar y descargar los assets.
 - **Sin biometría:** no hay reconocimiento facial ni inferencias de edad, género o emoción.
 
+## Video principal: varias personas en una cafetería
+
+La [portada](https://juliosuas.github.io/cafe-analytics/) presenta **un único video protagonista** de 10.28 segundos, con varias personas a ambos lados del mostrador y seguimiento ejecutado por el MVP. Reproducción silenciosa en bucle, pausa visible y respeto a la preferencia de movimiento reducido. Fuente: [Sururi Ballıdağ Director / Pexels 35545660](https://www.pexels.com/video/busy-cafe-with-customers-ordering-at-counter-35545660/).
+
+**Cámara móvil:** esta demo muestra detección, IDs y ocupación del encuadre completo. No sirve para interpretar trayectorias como recorridos físicos ni para medir espera por zonas. No clasifica roles ni cuenta tazas. [Reporte](https://juliosuas.github.io/cafe-analytics/flow/report.html) · [Procedencia y licencia](SOURCES.md).
+
+```bash
+python scripts/download_assets.py --demo cafe-flow
+cafe-analytics run --source assets/cafe-flow.mp4 --config configs/cafe-flow.json --output runs/cafe-flow --width 1280
+python scripts/verify_run.py runs/cafe-flow
+```
+
 ## Demo de cafetería de barra
 
-[Ver demo pública](https://juliosuas.github.io/cafe-analytics/#demo) · [Resumen para el dueño](https://juliosuas.github.io/cafe-analytics/cafe/owner.html) · [Reporte técnico](https://juliosuas.github.io/cafe-analytics/cafe/report.html)
+[Ver demo técnica de barra](https://juliosuas.github.io/cafe-analytics/cafe/report.html) · [Resumen para el dueño](https://juliosuas.github.io/cafe-analytics/cafe/owner.html) · [Reporte técnico](https://juliosuas.github.io/cafe-analytics/cafe/report.html)
 
 ![Detecciones y zonas de barra](docs/cafe/preview.jpg)
 

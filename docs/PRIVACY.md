@@ -15,4 +15,4 @@ No hay borrado automático, cifrado propio, usuarios, autenticación ni controle
 
 `runs/`, modelos, videos originales y credenciales se excluyen de Git. Solo la demo pública revisada se copia a `docs/`. Antes de compartir un reporte propio, revisa video, imágenes y `source`; evita subirlos a issues públicos. En la fase remota habrá que separar datos agregados de evidencia de video y añadir autorización de acceso y retención explícita.
 
-La portada pública incorpora una referencia externa de YouTube (Artisti Coffee Roasters) mediante su reproductor. Ese reproductor se comunica con YouTube y aplica sus condiciones; no forma parte del procesamiento local de analytics. No se envían videos de usuarios a ese reproductor. Los reportes HTML generados por la CLI siguen usando archivos locales y no incluyen ese iframe externo.
+La portada reproduce un archivo MP4 de demo servido desde GitHub Pages. No incorpora reproductores externos de YouTube. El video muestra personas identificables de una fuente pública licenciada; el procesamiento no identifica sus rostros. Los reportes de negocios reales deben mantenerse privados.

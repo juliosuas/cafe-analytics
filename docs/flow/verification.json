@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "decoded_video_frames": 308,
+  "confirmed_ids": 14,
+  "trajectory_samples": 1575,
+  "crossing_events": 0,
+  "heatmap_person_seconds": 54.42103333333334
+}

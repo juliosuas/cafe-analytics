@@ -95,4 +95,14 @@ Navegador integrado: seis opciones de giro cambian pregunta/señal/acción/dato 
 
 ### Referencia audiovisual de operación
 
-A petición del usuario, la portada presenta un reproductor real de Artisti Coffee Roasters (29:09) en vez de una imagen estática. Se verificó reproducción del video original y visualmente la llegada a barra con vasos visibles en 14:34. El iframe cargó su reproductor y aceptó reproducción en la vista local. No se ejecutó analítica ni se generaron conteos de tazas sobre ese material. Véase [procedencia](SOURCES.md).
+Versión histórica, sustituida por el video único descrito abajo: la portada presentó un reproductor real de Artisti Coffee Roasters (29:09) en vez de una imagen estática. Se verificó reproducción del video original y visualmente la llegada a barra con vasos visibles en 14:34. El iframe cargó su reproductor y aceptó reproducción en la vista local. No se ejecutó analítica ni se generaron conteos de tazas sobre ese material. Véase [procedencia](SOURCES.md).
+
+## Video único de portada · 8 de octubre de 2026
+
+Fuente Pexels 35545660, SHA256 documentado en SOURCES.md. Ejecución completa local en macOS 15.7.4 arm64, Python 3.12.12, YOLOX-S CPU, ancho 1280: **308/308 fotogramas**, 10.276933 s, 124.57 s de procesamiento (2.47 FPS). Verificador independiente: 1,575 muestras de trayectoria, 54.421033 persona-segundos acumulados, 14 IDs temporales, máximo de 8 detecciones simultáneas. Los IDs no representan personas únicas. Salida H.264 1280×720 sin audio, con faststart.
+
+**Límite visual comprobado:** cámara móvil, personas parcialmente ocultas y un falso positivo sobre abrigo/bolso en una silla (visible alrededor de 3 s). No se presenta como benchmark de precisión. Solo se configura el encuadre completo; no hay gates ni inferencia de roles. No usar estos mapas para interpretar recorridos físicos o espera. La portada informa sobre errores posibles y muestra el resultado real del modelo, sin correcciones manuales de contadores.
+
+Validación local: 25 tests pasan (8.13 s); verificador de documentación: 23 archivos, 111 destinos locales. Navegador: exactamente un video y cero iframes, H.264 reproducido, duración 10.276944 s, readyState 4, muted=true y reproducción en progreso. Se comprueban pausa/reanudación y diseño móvil antes de publicar.
+
+La ejecución CI anterior del mismo motor, [37889503348](https://github.com/juliosuas/cafe-analytics/actions/runs/37889503348), completó en Ubuntu 24.04 y macOS 14 arm64: 25 tests por plataforma, ambos clips completos (retail 341 frames y barra 900 frames) y verificadores aprobados. Ese CI no incluye el nuevo clip de portada; este último fue ejecutado y verificado localmente.

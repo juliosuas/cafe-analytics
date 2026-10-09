@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "run_id": "035be5bf-adbf-4590-8968-43093fcb3647",
+  "scope": "session",
+  "video_seconds": 10.276933333333334,
+  "frames_processed": 308,
+  "business_conclusions": "insufficient_evidence",
+  "coverage": {
+    "kind": "processed_frames_only",
+    "business_day_fraction": null,
+    "timestamp_mode": "container_pts",
+    "stop_reason": "end_of_file"
+  },
+  "access_flow": {
+    "status": "not_configured",
+    "counts": null
+  },
+  "zones": [
+    {
+      "zone": "encuadre",
+      "observed_person_seconds": 54.42103333333334,
+      "peak_observed_occupancy": 8,
+      "first_peak_time_s": 1.4681333333333335,
+      "first_peak_frame": 44,
+      "frames_with_presence": 306,
+      "presence_frame_fraction": 0.9935064935064936,
+      "visits": 15,
+      "censored_visits": 15,
+      "mean_observed_visit_s": 3.6280688888888895,
+      "review_question": "¿Qué ocurre en esta zona cuando alcanza su máximo observado?",
+      "next_step": "Revisar el fragmento y anotar el contexto antes de cambiar la operación."
+    }
+  ],
+  "limitations": [
+    "Es un resumen de esta sesión, no un reporte diario ni una comparación histórica.",
+    "La precisión en este local y la cobertura de la jornada no están validadas.",
+    "No distingue empleados de clientes; los IDs pueden fragmentarse o intercambiarse.",
+    "Permanencia no equivale a espera, atención, compra ni abandono.",
+    "La media incluye visitas parciales; el cierre de una visita no garantiza que se vio su inicio.",
+    "La presencia se expresa por fotogramas, no como porcentaje del tiempo ni de capacidad."
+  ],
+  "scene_note": "Demo visual con varias personas: Sururi Ballıdağ Director / Pexels 35545660. Camara movil, 10.28 s: solo se mide presencia dentro del encuadre completo. Las trayectorias y el heatmap estan en coordenadas de imagen y contienen movimiento de camara; no describen recorridos fisicos. Sin roles automaticos, conteo de tazas, puertas ni tiempo de espera. Para decisiones por zona se requiere una camara fija y validacion manual.",
+  "size_filter": {
+    "min_person_height": 0,
+    "discarded_detection_samples": 0
+  },
+  "evidence": {
+    "video": "annotated.mp4",
+    "timeline": "occupancy.csv",
+    "summary": "summary.json",
+    "visits": "visits.csv"
+  }
+}

@@ -11,6 +11,7 @@ ASSETS = [
 ]
 CAFE_ASSET = ("assets/cafe-counter.mp4", "https://videos.pexels.com/video-files/8430969/8430969-uhd_4096_2160_25fps.mp4", "37c732b261d16cf8fe23b6a2f4745b0c321b18c5b7680657ed2e47ab0e28cebd")
 
+FLOW_ASSET = ("assets/cafe-flow.mp4", "https://videos.pexels.com/video-files/35545660/15059172_2560_1440_30fps.mp4", "c71710a841291aa530a9596735ef8989464bc1fb11bd6c965144b552fed6f3b9")
 
 def sha256(path):
     h = hashlib.sha256()
@@ -23,9 +24,9 @@ def sha256(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model-only", action="store_true")
-    parser.add_argument("--demo", choices=["retail", "cafe"], default="retail", help="Video publico que descargar junto al modelo")
+    parser.add_argument("--demo", choices=["retail", "cafe", "cafe-flow"], default="retail", help="Video publico que descargar junto al modelo")
     args = parser.parse_args()
-    assets = ASSETS[:1] if args.model_only else [ASSETS[0], CAFE_ASSET if args.demo == "cafe" else ASSETS[1]]
+    assets = ASSETS[:1] if args.model_only else [ASSETS[0], {"cafe": CAFE_ASSET, "cafe-flow": FLOW_ASSET, "retail": ASSETS[1]}[args.demo]]
     for relative, url, expected in assets:
         path = ROOT / relative
         if path.exists():
