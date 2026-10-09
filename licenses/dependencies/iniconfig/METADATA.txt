@@ -1,0 +1,4 @@
+Package: iniconfig
+Version: 2.3.0
+License: MIT
+Homepage: 

@@ -1,0 +1,23 @@
+name: Reportar un problema
+description: Un fallo reproducible del pipeline, reporte o editor.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Qué ocurrió y qué esperabas
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Pasos para reproducir
+      description: Usa la demo pública o datos sintéticos. No adjuntes video privado, rutas sensibles ni credenciales.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Sistema, Python y versión/commit
+    validations:
+      required: true

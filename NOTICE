@@ -1,0 +1,15 @@
+Cafe Analytics MVP 0.1
+Copyright 2026 Cafe Analytics contributors
+Original code is licensed under Apache License 2.0; see LICENSE.
+
+The YOLOX detector's preprocessing and decoding follow the official
+Megvii-BaseDetection/YOLOX implementation (Apache License 2.0).
+Copyright (c) Megvii Inc. All rights reserved.
+Source: https://github.com/Megvii-BaseDetection/YOLOX
+Modifications: standalone person-only ONNX inference, NumPy grid construction,
+OpenCV NMS, validation, CPU execution settings. No YOLOX Python package required.
+Official release weights are included unmodified; provenance is in SOURCES.md.
+
+The tracker, analytics, CLI, report and editor are original implementations.
+Bundled video and generated video/image derivatives retain the separate Pexels
+license; Apache-2.0 does not apply to them. See SOURCES.md and THIRD_PARTY.md.

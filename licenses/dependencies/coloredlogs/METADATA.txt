@@ -1,0 +1,4 @@
+Package: coloredlogs
+Version: 15.0.1
+License: MIT
+Homepage: https://coloredlogs.readthedocs.io

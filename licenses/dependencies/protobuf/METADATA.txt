@@ -1,0 +1,4 @@
+Package: protobuf
+Version: 7.36.2
+License: 3-Clause BSD License
+Homepage: https://developers.google.com/protocol-buffers/

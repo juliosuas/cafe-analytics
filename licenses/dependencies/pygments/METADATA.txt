@@ -1,0 +1,4 @@
+Package: pygments
+Version: 2.21.0
+License: BSD-2-Clause
+Homepage: 

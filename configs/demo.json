@@ -1,0 +1,9 @@
+{
+  "anchor": "bottom_center",
+  "scene_note": "Demo técnica con video público de supermercado (Suika Chan / Pexels 10901926). Zonas de imagen y línea virtual ilustrativas: los cruces no son entradas reales al negocio. El encuadre corta pies y tiene oclusiones; no usar estos números como métricas comerciales validadas.",
+  "zones": [
+    {"name": "exhibicion", "polygon": [[0.02,0.55],[0.48,0.55],[0.48,1.0],[0.02,1.0]]},
+    {"name": "pasillo", "polygon": [[0.48,0.55],[0.98,0.55],[0.98,1.0],[0.48,1.0]]}
+  ],
+  "gates": [{"name": "paso_virtual", "points": [[0.5,0.55],[0.5,1.0]], "in_direction": "positive_to_negative", "hysteresis": 0.012}]
+}

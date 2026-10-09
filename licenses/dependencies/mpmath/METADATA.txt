@@ -1,0 +1,4 @@
+Package: mpmath
+Version: 1.3.0
+License: BSD
+Homepage: http://mpmath.org/

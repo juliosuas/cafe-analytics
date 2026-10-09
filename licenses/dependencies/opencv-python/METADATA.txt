@@ -1,0 +1,4 @@
+Package: opencv-python
+Version: 4.11.0.86
+License: Apache 2.0
+Homepage: https://github.com/opencv/opencv-python

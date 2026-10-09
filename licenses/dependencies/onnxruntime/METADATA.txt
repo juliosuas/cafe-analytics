@@ -1,0 +1,4 @@
+Package: onnxruntime
+Version: 1.22.1
+License: MIT License
+Homepage: https://onnxruntime.ai

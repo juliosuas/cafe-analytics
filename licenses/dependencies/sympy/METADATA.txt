@@ -1,0 +1,4 @@
+Package: sympy
+Version: 1.14.0
+License: BSD
+Homepage: https://sympy.org

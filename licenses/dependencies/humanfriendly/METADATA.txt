@@ -1,0 +1,4 @@
+Package: humanfriendly
+Version: 10.0
+License: MIT
+Homepage: https://humanfriendly.readthedocs.io
