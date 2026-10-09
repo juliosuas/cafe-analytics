@@ -16,3 +16,6 @@ No hay borrado automático, cifrado propio, usuarios, autenticación ni controle
 `runs/`, modelos, videos originales y credenciales se excluyen de Git. Solo la demo pública revisada se copia a `docs/`. Antes de compartir un reporte propio, revisa video, imágenes y `source`; evita subirlos a issues públicos. En la fase remota habrá que separar datos agregados de evidencia de video y añadir autorización de acceso y retención explícita.
 
 La portada reproduce un archivo MP4 de demo servido desde GitHub Pages. No incorpora reproductores externos de YouTube. El video muestra personas identificables de una fuente pública licenciada; el procesamiento no identifica sus rostros. Los reportes de negocios reales deben mantenerse privados.
+
+
+La demo principal de Pulso Local es un montaje ilustrativo con datos ficticios incrustados y etiquetados. Los roles y métricas no describen a las personas retratadas ni proceden de seguimiento individual. Los reportes técnicos anteriores siguen identificados como ejecuciones del motor.

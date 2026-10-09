@@ -15,7 +15,7 @@ Antes Café Analytics. Analytics local de personas para cafeterías, tiendas y o
 
 </div>
 
-[![Demo principal con varias personas](docs/flow/preview.jpg)](https://juliosuas.github.io/cafe-analytics/#operacion)
+[![Pulso Local: tres negocios y datos simulados](docs/showcase/poster.jpg)](https://juliosuas.github.io/cafe-analytics/#operacion)
 
 > **Estado actual:** MVP que analiza archivos locales y ofrece captura opcional de webcam. El monitoreo desatendido, las alertas y los reportes diarios automáticos son la siguiente etapa; todavía no están implementados. Las personas del video no respaldan este proyecto.
 
@@ -46,17 +46,13 @@ El MVP construye la base medible de ese producto. Separa tres cosas: lo que la c
 - **Procesamiento local:** sin cuenta, clave de API ni servicios de inferencia después de instalar y descargar los assets.
 - **Sin biometría:** no hay reconocimiento facial ni inferencias de edad, género o emoción.
 
-## Video principal: varias personas en una cafetería
+## Video principal: tres negocios, datos simulados
 
-La [portada](https://juliosuas.github.io/cafe-analytics/) presenta **un único video protagonista** de 10.28 segundos, con varias personas a ambos lados del mostrador y seguimiento ejecutado por el MVP. Reproducción silenciosa en bucle, pausa visible y respeto a la preferencia de movimiento reducido. Fuente: [Sururi Ballıdağ Director / Pexels 35545660](https://www.pexels.com/video/busy-cafe-with-customers-ordering-at-counter-35545660/).
+La [portada](https://juliosuas.github.io/cafe-analytics/) presenta un solo video de **27 segundos**: cafetería, restaurante/bar y tienda. Usa grabaciones reales con tarjetas de **datos ficticios** para mostrar la dirección del producto (permanencia, pedidos, bebidas, visitas y compras). El rótulo «DEMO ILUSTRATIVA · DATOS SIMULADOS» permanece incrustado durante todo el video, incluso en pantalla completa.
 
-**Cámara móvil:** esta demo muestra detección, IDs y ocupación del encuadre completo. No sirve para interpretar trayectorias como recorridos físicos ni para medir espera por zonas. No clasifica roles ni cuenta tazas. [Reporte](https://juliosuas.github.io/cafe-analytics/flow/report.html) · [Procedencia y licencia](SOURCES.md).
+**No es una salida del modelo.** El motor actual continúa analizando personas y zonas; no se atribuyen pedidos ni bebidas a las personas de los clips. Las ejecuciones verificadas se conservan en [flow](https://juliosuas.github.io/cafe-analytics/flow/report.html), [barra](https://juliosuas.github.io/cafe-analytics/cafe/report.html) y [retail](https://juliosuas.github.io/cafe-analytics/report.html).
 
-```bash
-python scripts/download_assets.py --demo cafe-flow
-cafe-analytics run --source assets/cafe-flow.mp4 --config configs/cafe-flow.json --output runs/cafe-flow --width 1280
-python scripts/verify_run.py runs/cafe-flow
-```
+Guion de la demo en [scenario.json](docs/showcase/scenario.json); render reproducible con `python scripts/render_marketing_demo.py` y FFmpeg con drawtext. Rutas de entrada y descargas en [SOURCES.md](SOURCES.md). En Ubuntu pasa `--font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf --bold-font /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf`; macOS usa Arial del sistema. No añade dependencias al motor.
 
 ## Demo de cafetería de barra
 

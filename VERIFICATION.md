@@ -112,3 +112,9 @@ La ejecución CI anterior del mismo motor, [37889503348](https://github.com/juli
 Nombre público actualizado a Pulso Local; retirados el bloque «La ingeniería vive en GitHub» y el enlace de navegación «Desarrolladores». El nombre técnico del paquete y las rutas del repositorio se conservan para compatibilidad. El video de portada permanece hasta que el usuario elija su sustituto.
 
 Se añadió `docs/candidatos.html`, separado de la portada, con tres reproductores de fuentes originales. Prueba en navegador: los tres cargaron con readyState 4 y reprodujeron; al iniciar otro, se pausa el anterior. Duraciones observadas: Mixkit 4043 = 14.833333 s, Pexels 3135925 = 10.043367 s, Pexels 18533896 = 12.628333 s. Se inspeccionaron los encuadres de barra con clientes/personal, cafetería con mesas y zona de comida. Ninguno valida observaciones de una o dos horas. Los ejemplos de métricas futuras están rotulados como ilustrativos y separados de los videos.
+
+## Montaje de varios negocios con datos ficticios · 9 de octubre de 2026
+
+Solicitud posterior del usuario: usar un video corto y datos inventados, con varios negocios. Se generó un solo MP4 con tres segmentos de 9 segundos: cafetería, restaurante/bar y tienda. No es una salida del detector. Su manifiesto `docs/showcase/scenario.json` declara `all_metrics_simulated: true`.
+
+FFprobe: H.264 1280×720, 30 FPS, duración 27.000000 s, 810 fotogramas. Todos los fotogramas llevan el rótulo de simulación; las tarjetas aparecen escalonadas al inicio de cada escena. Las métricas quedan incrustadas, visibles también en pantalla completa. Se revisan los tres segmentos y el video completo mediante decodificación. Verificación documental: 24 archivos, 111 destinos locales.

@@ -38,7 +38,7 @@ def check():
             if not location.is_relative_to(ROOT) or not location.exists():
                 failures.append(f'{path.relative_to(ROOT)}: {target}')
             checked += 1
-    for page, asset_id in [('index.html', '35545660'), ('report.html', '10901926'),
+    for page, asset_id in [('index.html', '3135925'), ('report.html', '10901926'),
                            ('flow/report.html', '35545660'), ('flow/owner.html', '35545660'),
                            ('cafe/report.html', '8430969'), ('cafe/owner.html', '8430969')]:
         source = (ROOT / 'docs' / page).read_text(encoding='utf-8')

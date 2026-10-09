@@ -75,3 +75,13 @@ La página `docs/candidatos.html` reproduce desde los proveedores originales est
 3. [People are eating at tables in a food court — Nazim Zafri / Pexels 18533896](https://www.pexels.com/video/people-are-eating-at-tables-in-a-food-court-18533896/). Licencia Pexels. Fuente del reproductor: https://videos.pexels.com/video-files/18533896/18533896-hd_1920_1080_30fps.mp4
 
 Fuentes y fichas consultadas el 9 de octubre de 2026. Las personas, negocios y marcas no respaldan el proyecto. Clips breves para elegir una escena visual; no acreditan pedidos, productividad, permanencias de dos horas ni ritmos horarios. No se extrapolan las repeticiones del video. Los archivos externos pueden cambiar o dejar de estar disponibles; cada tarjeta enlaza a la fuente.
+
+## Montaje ilustrativo de Pulso Local · 9 de octubre de 2026
+
+Por solicitud del usuario, la portada usa un único montaje de 27 segundos con datos ficticios. Todos los cuadros llevan el rótulo «DEMO ILUSTRATIVA · DATOS SIMULADOS». Los roles, pedidos, cantidades, visitas, compras y tiempos están escritos por diseño; **no proceden del pipeline ni describen hechos del material original**. No se clasifica ni evalúa a las personas retratadas. Los autores y marcas no respaldan el producto.
+
+- 0–9 s: cafetería, Nazim Zafri / Pexels 3135925 (fuente y licencia indicadas arriba). Input `assets/marketing-cafe.mp4`, SHA256 `226924eb46bcafbd3d3dd6f1ad0aed6b35d45e58730fd692dd12c915e5eeae5a`.
+- 9–18 s: restaurante/bar, Mixkit 4043, Mixkit Stock Video Free License. Input `assets/business-demo.mp4`, SHA256 `c2f9850f00c8d01e8c938f9452cbeebe7252d65a1088e85c349548d6eb517565`. La fuente es time-lapse; el montaje no infiere el tiempo real de esa grabación.
+- 18–27 s: tienda, Suika Chan / Pexels 10901926 (fuente, licencia y SHA256 indicados al inicio). Input `assets/retail.mp4`.
+- Derivados: `docs/showcase/demo.mp4` (H.264 1280×720, 30 FPS, sin audio), `poster.jpg` y `scenario.json`. El JSON contiene solo el guion de cifras ficticias.
+- Renderer: `scripts/render_marketing_demo.py`, utiliza FFmpeg con drawtext y tipografías del sistema. Para reproducir, guarda los tres archivos en las rutas de input anteriores desde sus URLs documentadas; no hay llamadas de inferencia. Los originales no se versionan; los derechos audiovisuales siguen bajo las licencias de las fuentes, no Apache-2.0.

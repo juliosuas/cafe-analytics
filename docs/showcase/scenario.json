@@ -1,0 +1,73 @@
+{
+  "type": "fictional_product_demonstration",
+  "all_metrics_simulated": true,
+  "duration_seconds": 27,
+  "scenes": [
+    {
+      "business": "CAFETERÍA",
+      "start_s": 0,
+      "duration_s": 9,
+      "illustrative_cards": [
+        {
+          "label": "CLIENTE 04",
+          "value": "2 h sentado",
+          "detail": "Pedido registrado · 1 café"
+        },
+        {
+          "label": "BARISTA A",
+          "value": "12 cafés",
+          "detail": "Preparados en la última hora"
+        },
+        {
+          "label": "OCUPACIÓN",
+          "value": "8 de 10",
+          "detail": "Mesas ocupadas"
+        }
+      ]
+    },
+    {
+      "business": "RESTAURANTE / BAR",
+      "start_s": 9,
+      "duration_s": 9,
+      "illustrative_cards": [
+        {
+          "label": "MESA 07",
+          "value": "18 min",
+          "detail": "Desde que hizo su pedido"
+        },
+        {
+          "label": "BARRA",
+          "value": "24 bebidas",
+          "detail": "Preparadas en la última hora"
+        },
+        {
+          "label": "SERVICIO",
+          "value": "6 pedidos",
+          "detail": "Listos para entregar"
+        }
+      ]
+    },
+    {
+      "business": "TIENDA",
+      "start_s": 18,
+      "duration_s": 9,
+      "illustrative_cards": [
+        {
+          "label": "AFLUENCIA",
+          "value": "42 visitas",
+          "detail": "Durante la última hora"
+        },
+        {
+          "label": "CAJA",
+          "value": "3 min",
+          "detail": "Espera media del ejemplo"
+        },
+        {
+          "label": "VENTAS",
+          "value": "17 compras",
+          "detail": "Registradas en el ejemplo"
+        }
+      ]
+    }
+  ]
+}

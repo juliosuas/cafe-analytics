@@ -71,3 +71,8 @@ El objetivo operativo se amplía a **personas → preparación de bebida → pue
 5. Comparar conteos de eventos y tiempos contra esa referencia; cruzar POS si la pregunta es venta o conversión.
 
 **Estado:** detección de tazas y esos eventos aún no implementados. La demo procesada de 36 s continúa limitada a personas/zonas. Medimos la operación agregada, no desempeño individual del barista.
+
+
+## Presentación actual · 9 de octubre de 2026
+
+La marca pública es Pulso Local. La portada usa un montaje de 27 segundos de cafetería, restaurante/bar y tienda con métricas ficticias rotuladas. Es una demostración del concepto autorizada por el usuario, separada de la validación del motor. Los pedidos, consumos, roles y conteos de preparación de ese montaje están escritos en `docs/showcase/scenario.json`; no son capacidades implementadas ni resultados del modelo. Las demos anteriores se conservan como evidencia técnica.
